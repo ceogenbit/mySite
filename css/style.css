@@ -178,19 +178,6 @@ body {
   z-index: 100;
 }
 
-.header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #4718d3;
-  z-index: 10;
-  -webkit-transition: right 0.5s ease;
-  transition: right 0.5s ease;
-}
-
 .header__container {
   background-color: rgba(5, 70, 114, 0.6117647059);
   min-height: 3.4375rem;
@@ -270,7 +257,7 @@ body {
   height: 100%;
   padding: 9.375rem 1.25rem 1.875rem;
   overflow: auto;
-  background-color: rgba(71, 24, 211, 0.9803921569);
+  background-color: #4116c4;
   -webkit-transition: right 0.5s ease;
   transition: right 0.5s ease;
 }
@@ -303,11 +290,6 @@ body {
 }
 
 @media (min-width: 29.99875em) {
-  .header:before {
-    width: 55%;
-    border-radius: 3.125rem 0 0 0;
-  }
-
   .menu__body {
     width: 55%;
     border-radius: 3.125rem 0 0 3.125rem;
@@ -333,11 +315,24 @@ body {
 }
 
 @media (max-width: 47.99875em) {
+  .header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #4116c4;
+    z-index: 10;
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+  }
+
   .icon-menu {
     display: block;
     position: relative;
-    width: 1.875rem;
-    height: 1.125rem;
+    width: 2.1875rem;
+    height: 1.4375rem;
     z-index: 100;
   }
 
@@ -388,6 +383,13 @@ body {
 @media (max-width: 47.99875em) and (any-hover: none) {
   .icon-menu {
     cursor: default;
+  }
+}
+
+@media (max-width: 47.99875em) and (min-width: 29.99875em) {
+  .header:before {
+    width: 55%;
+    border-radius: 3.125rem 0 0 0;
   }
 }
 
