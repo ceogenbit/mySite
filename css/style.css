@@ -252,6 +252,12 @@ body {
   z-index: -1;
 }
 
+.header__menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .icon-menu {
   display: none;
 }
