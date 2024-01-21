@@ -207,6 +207,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1.25rem;
+  -webkit-box-shadow: 0px 5px 6px -5px rgb(0, 0, 0);
+          box-shadow: 0px 5px 6px -5px rgb(0, 0, 0);
 }
 
 .header__nav {
@@ -320,6 +322,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(5, 70, 114, 0.6117647059);
+  -webkit-box-shadow: 0px -7px 9px -10px rgb(0, 0, 0);
+          box-shadow: 0px -7px 9px -10px rgb(0, 0, 0);
 }
 
 .footer__container {
