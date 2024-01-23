@@ -100,12 +100,69 @@ h6 {
   font-size: inherit;
 }
 
+.dark-theme body {
+  background-color: #03182b;
+}
+
+.light-theme body {
+  background-color: #eee2dc;
+}
+
+.light-theme .title {
+  color: #222629;
+}
+
+.light-theme .title::before {
+  background-color: #eee2dc;
+}
+
+.light-theme .header__container {
+  background-color: #3c3ea7;
+}
+
+.light-theme .header__link::before {
+  background-color: #222629;
+}
+
+.light-theme .header__theme-btn {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  background: url("../img/icons/moon.svg") center/1.875rem 1.875rem no-repeat;
+}
+
+.light-theme .header__theme-btn svg {
+  display: none;
+}
+
+.light-theme .portfolio {
+  color: #222629;
+}
+
+.light-theme .portfolio__title._watcher-view {
+  opacity: 0.5;
+}
+
+.light-theme .portfolio__descr {
+  font-weight: 700;
+}
+
+.light-theme .portfolio .swiper-button-prev svg path,
+.light-theme .portfolio .swiper-button-next svg path {
+  fill: #222629;
+}
+
+.light-theme .footer {
+  background-color: #3c3ea7;
+}
+
 body {
-  background-color: #081f35;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .lock body {
@@ -176,8 +233,14 @@ body {
      object-fit: contain;
 }
 
+.title {
+  font-family: "Nunito";
+  font-weight: 700;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
 .logo {
-  width: 9.375rem;
   aspect-ratio: 250/41;
   pointer-events: none;
   -o-object-fit: contain;
@@ -192,7 +255,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #081f35;
   z-index: 100;
 }
 
@@ -209,6 +271,8 @@ body {
   gap: 1.25rem;
   -webkit-box-shadow: 0px 5px 6px -5px rgb(0, 0, 0);
           box-shadow: 0px 5px 6px -5px rgb(0, 0, 0);
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 .header__nav {
@@ -244,6 +308,7 @@ body {
   overflow: hidden;
   position: relative;
   text-transform: lowercase;
+  z-index: 10;
 }
 
 .header__link::before {
@@ -263,6 +328,29 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.header__theme-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.8125rem;
+          flex: 0 0 2.8125rem;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  background: url("../img/icons/sun.svg") center/1.875rem 1.875rem no-repeat;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .icon-menu {
@@ -324,6 +412,7 @@ body {
   background-color: rgba(5, 70, 114, 0.6117647059);
   -webkit-box-shadow: 0px -7px 9px -10px rgb(0, 0, 0);
           box-shadow: 0px -7px 9px -10px rgb(0, 0, 0);
+  border-radius: 0.625rem 0.625rem 0 0;
 }
 
 .footer__container {
@@ -379,11 +468,6 @@ body {
           transform: translate(0, -0.25rem);
 }
 
-.title {
-  font-family: "Nunito";
-  font-weight: 700;
-}
-
 .portfolio {
   padding-top: 6.25rem;
 }
@@ -403,6 +487,10 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 2.5rem;
           flex: 0 0 2.5rem;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .portfolio__control .swiper-button-prev svg,
@@ -421,8 +509,6 @@ body {
 
 .portfolio__control .swiper-button-disabled {
   opacity: 0.2;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
 }
 
 .portfolio__title {
@@ -440,7 +526,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #081f35;
+  background-color: #03182b;
   -webkit-transition: left 1.5s ease;
   transition: left 1.5s ease;
 }
@@ -451,16 +537,6 @@ body {
 
 .portfolio__title._watcher-view::before {
   left: 100%;
-}
-
-.portfolio__slider .swiper-pagination {
-  bottom: 0;
-}
-
-.portfolio__slider .swiper-pagination span {
-  width: 1.5625rem;
-  border-radius: 0.625rem;
-  background-color: #fff;
 }
 
 .portfolio__body img {
@@ -615,6 +691,10 @@ body {
     margin-bottom: 2.5rem;
   }
 
+  .logo {
+    width: 9.375rem;
+  }
+
   .portfolio__title-slide {
     font-size: 2.375rem;
   }
@@ -631,6 +711,10 @@ body {
 
   .title--margin:not(:last-child) {
     margin-bottom: 0.8125rem;
+  }
+
+  .logo {
+    width: 8.4375rem;
   }
 
   .portfolio__title-slide {
@@ -719,12 +803,6 @@ body {
   }
 }
 
-@media (max-width: 47.99875em) and (min-width: 29.99875em) {
-  .header:before {
-    width: 47%;
-  }
-}
-
 @media (min-width: 20em) and (max-width: 81.25em) {
 @supports (letter-spacing: clamp( 0.625rem , -0.1913265306rem  +  4.0816326531vw , 3.125rem )) {
     .title {
@@ -762,6 +840,18 @@ body {
     }
 }
 
+@supports (width: clamp( 8.4375rem , 8.131377551rem  +  1.5306122449vw , 9.375rem )) {
+    .logo {
+      width: clamp( 8.4375rem , 8.131377551rem  +  1.5306122449vw , 9.375rem );
+    }
+}
+
+@supports not (width: clamp( 8.4375rem , 8.131377551rem  +  1.5306122449vw , 9.375rem )) {
+    .logo {
+      width: calc(8.4375rem + 0.9375 * (100vw - 20rem) / 61.25);
+    }
+}
+
 @supports (font-size: clamp( 1.875rem , 1.7117346939rem  +  0.8163265306vw , 2.375rem )) {
     .portfolio__title-slide {
       font-size: clamp( 1.875rem , 1.7117346939rem  +  0.8163265306vw , 2.375rem );
@@ -773,6 +863,12 @@ body {
       font-size: calc(1.875rem + 0.5 * (100vw - 20rem) / 61.25);
     }
 }
+}
+
+@media (max-width: 47.99875em) and (min-width: 29.99875em) {
+  .header:before {
+    width: 47%;
+  }
 }
 
 @media (any-hover: hover) {

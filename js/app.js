@@ -14,6 +14,13 @@
             document.documentElement.classList.add(className);
         }));
     }
+    function addLoadedClass() {
+        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+            setTimeout((function() {
+                document.documentElement.classList.add("loaded");
+            }), 0);
+        }));
+    }
     let bodyLockStatus = true;
     let bodyLockToggle = (delay = 500) => {
         if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
@@ -3819,7 +3826,34 @@
             }));
         }
     }), 0);
+    window.addEventListener("load", windowLoad);
+    function windowLoad() {
+        const htmlBlock = document.documentElement;
+        const saveUserTheme = localStorage.getItem("user-theme");
+        let userTheme;
+        if (window.matchMedia) userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark-theme" : "light-theme";
+        window.matchMedia("(prefers-color-scheme: dark-theme)").addEventListener("change", (e => {
+            !saveUserTheme ? changeTheme() : null;
+        }));
+        const themeButton = document.querySelector(".header__theme-btn");
+        if (themeButton) themeButton.addEventListener("click", (function(e) {
+            changeTheme(true);
+        }));
+        function setThemeClass() {
+            if (saveUserTheme) htmlBlock.classList.add(saveUserTheme); else htmlBlock.classList.add(userTheme);
+        }
+        setThemeClass();
+        function changeTheme(saveTheme = false) {
+            let currentTheme = htmlBlock.classList.contains("light-theme") ? "light-theme" : "dark-theme";
+            let newTheme;
+            if (currentTheme === "light-theme") newTheme = "dark-theme"; else if (currentTheme === "dark-theme") newTheme = "light-theme";
+            htmlBlock.classList.remove(currentTheme);
+            htmlBlock.classList.add(newTheme);
+            saveTheme ? localStorage.setItem("user-theme", newTheme) : null;
+        }
+    }
     window["FLS"] = true;
     isWebp();
+    addLoadedClass();
     menuInit();
 })();
