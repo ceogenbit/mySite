@@ -6,64 +6,51 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240123225203">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240128133144">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="dark-theme">
+<body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header header--position">
 			<div class="header__container">
-				<img class="logo" src="img/logo.svg" alt="Logo">
-				<nav class="header__nav">
-					<ul class="header__list">
-						<li class="header__item">
-							<a class="header__link" href="#"><span>about me</span></a>
+				<img class="logo logo--position" src="img/logo.svg" alt="Logo">
+				<nav class="header__menu menu">
+					<ul class="menu__list menu__list--position">
+						<li class="menu__item">
+							<a class="menu__link" href="#" aria-label="Go to the section"><span>about me</span></a>
 						</li>
-						<li class="header__item">
-							<a class="header__link" href="#"><span>education</span></a>
+						<li class="menu__item">
+							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
 						</li>
-						<li class="header__item">
-							<a class="header__link" href="#"><span>skills</span></a>
+						<li class="menu__item">
+							<a class="menu__link" href="#" aria-label="Go to the section"><span>skills</span></a>
 						</li>
-						<li class="header__item">
-							<a class="header__link" href="#"><span>my works</span></a>
+						<li class="menu__item">
+							<a class="menu__link" href="#" aria-label="Go to the"><span>my works</span></a>
 						</li>
 					</ul>
+					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
+					<button type="button" class="menu__icon icon-menu" aria-label="Open the mobile menu"><span></span></button>
 				</nav>
-				<button class="header__theme-btn" id='themeToggle' type="button" aria-label="Theme button"></button>
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu" aria-label="Menu"><span></span></button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">about me</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">education</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">skills</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">my works</a></li>
-						</ul>
-					</nav>
-				</div>
 			</div>
 		</header>
 		<main class="page">
 			<section class="portfolio">
 				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin" data-watch-threshold="1" data-watch>My works</h2>
-					<!-- Оболонка слайдера -->
+					<h2 class="portfolio__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>My works</h2>
 					<div class="portfolio__slider swiper">
-						<!-- Частина слайдера, що рухається -->
 						<div class="portfolio__wrapper swiper-wrapper">
-							<!-- Слайд -->
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
-									<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank" aria-label="My work The Wild Kingdom">
 										<picture><source srcset="img/portfolio/the-wild-kingdom.webp" type="image/webp"><img src="img/portfolio/the-wild-kingdom.webp" alt="The Wild Kingdom"></picture>
 									</a>
-									<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">
-										<h4 class="portfolio__title-slide">The Wild Kingdom</h4>
-									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">The Wild Kingdom</a>
+									</h3>
 									<div class="portfolio__descr">
 										<p>A better world for pets</p>
 									</div>
@@ -71,12 +58,12 @@
 							</div>
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
-									<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/interia/" target="_blank">
 										<picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.webp" alt="Interia"></picture>
 									</a>
-									<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">
-										<h4 class="portfolio__title-slide">Interia</h4>
-									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">Interia</a>
+									</h3>
 									<div class="portfolio__descr">
 										<p>Blending creativity and functionality in every design</p>
 									</div>
@@ -84,12 +71,12 @@
 							</div>
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
-									<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/eatly/" target="_blank">
 										<picture><source srcset="img/portfolio/eatly.webp" type="image/webp"><img src="img/portfolio/eatly.webp" alt="Eatly"></picture>
 									</a>
-									<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">
-										<h4 class="portfolio__title-slide">Eatly</h4>
-									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">Eatly</a>
+									</h3>
 									<div class="portfolio__descr">
 										<p>Enjoy foods all over the world</p>
 									</div>
@@ -97,12 +84,12 @@
 							</div>
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
-									<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/coffee/" target="_blank">
 										<picture><source srcset="img/portfolio/coffee.webp" type="image/webp"><img src="img/portfolio/coffee.webp" alt="Coffee"></picture>
 									</a>
-									<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">
-										<h4 class="portfolio__title-slide">Coffee</h4>
-									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">Coffee</a>
+									</h3>
 									<div class="portfolio__descr">
 										<p>Discover the best coffee</p>
 									</div>
@@ -124,6 +111,43 @@
 					</div>
 				</div>
 			</section>
+			<!-- <section class="skills" id="skills">
+					<div class="skills__container" id="smooth-content">
+						<h2 class="skills__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>Skills</h2>
+						<ul class="skills__list">
+							<li class="skills__item">
+								<h3 class="skills__title-item">html</h3>
+								<div class="skills__progress skills__progress--html">
+									<span></span>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h3 class="skills__title-item">css</h3>
+								<div class="skills__progress skills__progress--css">
+									<span></span>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h3 class="skills__title-item">sass (scss)</h3>
+								<div class="skills__progress skills__progress--sass">
+									<span></span>
+								</div>		
+							</li>
+							<li class="skills__item">
+								<h3 class="skills__title-item">bem</h3>
+								<div class="skills__progress skills__progress--bem">
+									<span></span>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h3 class="skills__title-item">git / github</h3>
+								<div class="skills__progress skills__progress--git">
+									<span></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section> -->
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -153,7 +177,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240123225203"></script>
+	<script src="js/app.min.js?_v=20240128133144"></script>
 </body>
 
 </html>

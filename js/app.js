@@ -3835,7 +3835,7 @@
         window.matchMedia("(prefers-color-scheme: dark-theme)").addEventListener("change", (e => {
             !saveUserTheme ? changeTheme() : null;
         }));
-        const themeButton = document.querySelector(".header__theme-btn");
+        const themeButton = document.querySelector(".menu__theme-btn");
         if (themeButton) themeButton.addEventListener("click", (function(e) {
             changeTheme(true);
         }));
