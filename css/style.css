@@ -101,7 +101,7 @@ h6 {
 }
 
 .light-theme body {
-  color: #282a2b;
+  color: #232525;
   background-color: #e0e7eb;
 }
 
@@ -146,7 +146,7 @@ h6 {
 
 .light-theme .portfolio .swiper-button-prev svg path,
 .light-theme .portfolio .swiper-button-next svg path {
-  fill: #282a2b;
+  fill: #232525;
 }
 
 .light-theme .footer {
@@ -491,7 +491,7 @@ body {
   letter-spacing: 0.0375rem;
   line-height: 1.25;
   font-weight: 700;
-  font-size: 2.125rem;
+  font-size: 2.25rem;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -656,6 +656,12 @@ body {
      object-fit: contain;
 }
 
+.portfolio__control .swiper-button-prev svg path,
+.portfolio__control .swiper-button-next svg path {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
 .portfolio__control .swiper-button-prev {
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
@@ -670,6 +676,10 @@ body {
   opacity: 0.2;
   -webkit-animation: focus-in-contract-bck 1s ease 0.4s;
           animation: focus-in-contract-bck 1s ease 0.4s;
+}
+
+.portfolio__slider {
+  margin-right: -0.9375rem;
 }
 
 .portfolio__link-img {
@@ -737,59 +747,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.skills__title._watcher-view {
-  opacity: 0.3;
-  -webkit-animation: focus-in-contract-bck 1s ease;
-          animation: focus-in-contract-bck 1s ease;
-}
-
-.skills__item {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 25% 1fr;
-  grid-template-columns: 25% 1fr;
-  gap: 1.875rem;
-}
-
-.skills__item:not(:last-child) {
-  margin-bottom: 1.875rem;
-}
-
-.skills__title-item {
-  font-size: 1.875rem;
-  font-weight: 700;
-}
-
-.skills__progress {
-  background-color: #fff;
-}
-
-.skills__progress span {
-  display: inline-block;
-  height: 100%;
-  background-color: rgba(65, 22, 196, 0.933);
-}
-
-.skills__progress--html span {
-  width: 87%;
-}
-
-.skills__progress--css span {
-  width: 87%;
-}
-
-.skills__progress--sass span {
-  width: 78%;
-}
-
-.skills__progress--bem span {
-  width: 84%;
-}
-
-.skills__progress--git span {
-  width: 75%;
-}
-
 .swiper {
   overflow: hidden;
 }
@@ -838,12 +795,6 @@ body {
   display: none !important;
 }
 
-@media (min-width: 35.5em) {
-  .portfolio__slider {
-    margin-right: -0.9375rem;
-  }
-}
-
 @media (min-width: 47.99875em) {
   .menu__list {
     -webkit-box-flex: 1;
@@ -889,16 +840,20 @@ body {
     width: 9.375rem;
   }
 
+  main > :first-child {
+    padding-top: 2.5rem;
+  }
+
   .portfolio__title._watcher-view {
     letter-spacing: 3.125rem;
   }
 
-  .portfolio__title-slide {
-    font-size: 2.375rem;
+  .portfolio__body {
+    padding-right: 1.875rem;
   }
 
-  .skills__title._watcher-view {
-    letter-spacing: 3.125rem;
+  .portfolio__title-slide {
+    font-size: 2.375rem;
   }
 }
 
@@ -915,16 +870,20 @@ body {
     width: 8.4375rem;
   }
 
+  main > :first-child {
+    padding-top: 1.25rem;
+  }
+
   .portfolio__title._watcher-view {
     letter-spacing: 0.625rem;
   }
 
-  .portfolio__title-slide {
-    font-size: 1.875rem;
+  .portfolio__body {
+    padding-right: 1.25rem;
   }
 
-  .skills__title._watcher-view {
-    letter-spacing: 0.625rem;
+  .portfolio__title-slide {
+    font-size: 1.875rem;
   }
 }
 
@@ -1084,6 +1043,18 @@ body {
     }
 }
 
+@supports (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+    main > :first-child {
+      padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+    main > :first-child {
+      padding-top: calc(1.25rem + 1.25 * (100vw - 20rem) / 67.5);
+    }
+}
+
 @supports (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
     .portfolio__title._watcher-view {
       letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem );
@@ -1093,6 +1064,18 @@ body {
 @supports not (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
     .portfolio__title._watcher-view {
       letter-spacing: calc(0.625rem + 2.5 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem )) {
+    .portfolio__body {
+      padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem );
+    }
+}
+
+@supports not (padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem )) {
+    .portfolio__body {
+      padding-right: calc(1.25rem + 0.625 * (100vw - 20rem) / 67.5);
     }
 }
 
@@ -1107,18 +1090,6 @@ body {
       font-size: calc(1.875rem + 0.5 * (100vw - 20rem) / 67.5);
     }
 }
-
-@supports (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
-    .skills__title._watcher-view {
-      letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem );
-    }
-}
-
-@supports not (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
-    .skills__title._watcher-view {
-      letter-spacing: calc(0.625rem + 2.5 * (100vw - 20rem) / 67.5);
-    }
-}
 }
 
 @media (max-width: 47.99875em) and (min-width: 29.99875em) {
@@ -1130,6 +1101,11 @@ body {
 @media (any-hover: hover) {
   .menu__link:hover::before {
     top: 0;
+  }
+
+  .portfolio__control .swiper-button-prev svg:hover path,
+  .portfolio__control .swiper-button-next svg:hover path {
+    fill: rgba(65, 22, 196, 0.933);
   }
 
   .portfolio__link-img img:hover {
