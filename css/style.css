@@ -102,6 +102,7 @@ h6 {
 
 .light-theme body {
   color: #282a2b;
+  background-color: #e0e7eb;
 }
 
 .light-theme body .area {
@@ -132,7 +133,7 @@ h6 {
 }
 
 .light-theme .portfolio__title._watcher-view {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .light-theme .portfolio__title-slide::before {
@@ -157,8 +158,9 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  background-color: #03182b;
+  -webkit-transition: background-color 0.5s ease, opacity 0.3s ease;
+  transition: background-color 0.5s ease, opacity 0.3s ease;
 }
 
 .lock body {
@@ -167,6 +169,10 @@ body {
       touch-action: none;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+}
+
+.loaded body {
+  opacity: 1;
 }
 
 .wrapper {
@@ -661,9 +667,9 @@ body {
 }
 
 .portfolio__title._watcher-view {
-  opacity: 0.3;
-  -webkit-animation: focus-in-contract-bck 1s ease;
-          animation: focus-in-contract-bck 1s ease;
+  opacity: 0.2;
+  -webkit-animation: focus-in-contract-bck 1s ease 0.4s;
+          animation: focus-in-contract-bck 1s ease 0.4s;
 }
 
 .portfolio__link-img {
@@ -832,6 +838,12 @@ body {
   display: none !important;
 }
 
+@media (min-width: 35.5em) {
+  .portfolio__slider {
+    margin-right: -0.9375rem;
+  }
+}
+
 @media (min-width: 47.99875em) {
   .menu__list {
     -webkit-box-flex: 1;
@@ -892,7 +904,7 @@ body {
 
 @media (max-width: 20em) {
   .title {
-    font-size: 2.625rem;
+    font-size: 2.5rem;
   }
 
   .title--margin:not(:last-child) {
@@ -1036,15 +1048,15 @@ body {
 }
 
 @media (min-width: 20em) and (max-width: 87.5em) {
-@supports (font-size: clamp( 2.625rem , 1.5509259259rem  +  5.3703703704vw , 6.25rem )) {
+@supports (font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem )) {
     .title {
-      font-size: clamp( 2.625rem , 1.5509259259rem  +  5.3703703704vw , 6.25rem );
+      font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem );
     }
 }
 
-@supports not (font-size: clamp( 2.625rem , 1.5509259259rem  +  5.3703703704vw , 6.25rem )) {
+@supports not (font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem )) {
     .title {
-      font-size: calc(2.625rem + 3.625 * (100vw - 20rem) / 67.5);
+      font-size: calc(2.5rem + 3.75 * (100vw - 20rem) / 67.5);
     }
 }
 
