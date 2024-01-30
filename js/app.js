@@ -3267,7 +3267,7 @@
     function initSliders() {
         if (document.querySelector(".swiper")) new swiper_core_Swiper(".swiper", {
             modules: [ Navigation, Keyboard ],
-            slidesPerView: 1.15,
+            slidesPerView: 1.2,
             keyboard: true,
             speed: 800,
             navigation: {
@@ -3275,11 +3275,8 @@
                 nextEl: ".swiper-button-next"
             },
             breakpoints: {
-                568: {
-                    slidesPerView: 1.5
-                },
-                992: {
-                    slidesPerView: 2.5
+                768: {
+                    slidesPerView: 2.3
                 }
             },
             on: {}

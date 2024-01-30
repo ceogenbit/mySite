@@ -101,7 +101,7 @@ h6 {
 }
 
 .light-theme body {
-  color: #232525;
+  color: #242423;
   background-color: #e0e7eb;
 }
 
@@ -146,7 +146,7 @@ h6 {
 
 .light-theme .portfolio .swiper-button-prev svg path,
 .light-theme .portfolio .swiper-button-next svg path {
-  fill: #232525;
+  fill: #242423;
 }
 
 .light-theme .footer {
@@ -682,6 +682,11 @@ body {
   margin-right: -0.9375rem;
 }
 
+.portfolio__slide {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
 .portfolio__link-img {
   display: block;
   overflow: hidden;
@@ -983,6 +988,10 @@ body {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+
+  .portfolio__slide.swiper-slide-next {
+    opacity: 0.25;
   }
 }
 
