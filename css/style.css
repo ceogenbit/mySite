@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Josefin Sans";
+  font-family: "JosefinSans";
   font-display: swap;
   src: url("../fonts/JosefinSans-Bold.woff2") format("woff2"), url("../fonts/JosefinSans-Bold.woff") format("woff");
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Josefin Sans";
+  font-family: "JosefinSans";
   font-display: swap;
   src: url("../fonts/JosefinSans-Regular.woff2") format("woff2"), url("../fonts/JosefinSans-Regular.woff") format("woff");
   font-weight: 400;
@@ -28,6 +28,14 @@
   font-family: "Nunito";
   font-display: swap;
   src: url("../fonts/Nunito-Regular.woff2") format("woff2"), url("../fonts/Nunito-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TitanOne";
+  font-display: swap;
+  src: url("../fonts/TitanOne-Regular.woff2") format("woff2"), url("../fonts/TitanOne-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -54,7 +62,7 @@ body {
 body {
   color: #fff;
   line-height: 1;
-  font-family: "Josefin Sans";
+  font-family: "JosefinSans";
   font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -66,7 +74,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Josefin Sans";
+  font-family: "JosefinSans";
   font-size: inherit;
   line-height: inherit;
 }
@@ -236,9 +244,7 @@ body {
 }
 
 .title {
-  font-family: "Nunito";
-  letter-spacing: 1em;
-  font-weight: 700;
+  font-family: "TitanOne";
   overflow: hidden;
   text-align: center;
   -webkit-transition: opacity 0.5s ease 1s;
@@ -286,8 +292,8 @@ body {
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-animation: animate 25s linear infinite;
-          animation: animate 25s linear infinite;
+  -webkit-animation: animateBackground 25s linear infinite;
+          animation: animateBackground 25s linear infinite;
   bottom: -150px;
 }
 
@@ -381,7 +387,7 @@ body {
           animation-duration: 11s;
 }
 
-@-webkit-keyframes animate {
+@-webkit-keyframes animateBackground {
   0% {
     -webkit-transform: translateY(0) rotate(0deg);
             transform: translateY(0) rotate(0deg);
@@ -397,7 +403,7 @@ body {
   }
 }
 
-@keyframes animate {
+@keyframes animateBackground {
   0% {
     -webkit-transform: translateY(0) rotate(0deg);
             transform: translateY(0) rotate(0deg);
@@ -413,41 +419,33 @@ body {
   }
 }
 
-@-webkit-keyframes focus-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(18.75rem);
-            transform: translateZ(18.75rem);
-    -webkit-filter: blur(0.75rem);
-            filter: blur(0.75rem);
-    white-space: nowrap;
-  }
-
+@-webkit-keyframes fade-in {
   100% {
-    -webkit-transform: translateZ(0.75rem);
-            transform: translateZ(0.75rem);
+    opacity: 1;
     -webkit-filter: blur(0);
             filter: blur(0);
-    white-space: nowrap;
   }
 }
 
-@keyframes focus-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(18.75rem);
-            transform: translateZ(18.75rem);
-    -webkit-filter: blur(0.75rem);
-            filter: blur(0.75rem);
-    white-space: nowrap;
-  }
-
+@keyframes fade-in {
   100% {
-    -webkit-transform: translateZ(0.75rem);
-            transform: translateZ(0.75rem);
+    opacity: 1;
     -webkit-filter: blur(0);
             filter: blur(0);
-    white-space: nowrap;
+  }
+}
+
+@-webkit-keyframes scale {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -627,6 +625,153 @@ body {
           transform: translate(0, -0.25rem);
 }
 
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 68% 32% 63% 37%/42% 60% 40% 58%;
+  -webkit-box-shadow: 0.9375rem 0.9375rem 0.625rem -0.1875rem rgba(0, 0, 0, 0.62);
+          box-shadow: 0.9375rem 0.9375rem 0.625rem -0.1875rem rgba(0, 0, 0, 0.62);
+  overflow: hidden;
+}
+
+.about__item img {
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.about__arrow {
+  background-color: rgba(0, 0, 0, 0.937254902);
+  min-width: 0.75rem;
+}
+
+.about__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.about__text p {
+  -webkit-transform: scale(0.94);
+      -ms-transform: scale(0.94);
+          transform: scale(0.94);
+  -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+          animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.about__text p span {
+  display: inline-block;
+  opacity: 0;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.about__text p span:nth-child(1) {
+  -webkit-animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(2) {
+  -webkit-animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(3) {
+  -webkit-animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(4) {
+  -webkit-animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(5) {
+  -webkit-animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(6) {
+  -webkit-animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(7) {
+  -webkit-animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(8) {
+  -webkit-animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(9) {
+  -webkit-animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(10) {
+  -webkit-animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(11) {
+  -webkit-animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(12) {
+  -webkit-animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(13) {
+  -webkit-animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(14) {
+  -webkit-animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(15) {
+  -webkit-animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(16) {
+  -webkit-animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(17) {
+  -webkit-animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(18) {
+  -webkit-animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
 .portfolio__control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -670,12 +815,6 @@ body {
 
 .portfolio__control .swiper-button-disabled {
   opacity: 0.2;
-}
-
-.portfolio__title._watcher-view {
-  opacity: 0.2;
-  -webkit-animation: focus-in-contract-bck 1s ease 0.4s;
-          animation: focus-in-contract-bck 1s ease 0.4s;
 }
 
 .portfolio__slider {
@@ -752,6 +891,54 @@ body {
   margin-bottom: 0.5rem;
 }
 
+[data-ba] {
+  position: relative;
+}
+
+[data-ba-before] img,
+[data-ba-after] img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[data-ba-before] img {
+  width: 100%;
+}
+
+[data-ba-after] {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+[data-ba-after] img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+[data-ba-arrow] {
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 0.188rem;
+  z-index: 2;
+}
+
+[data-ba-arrow]::before,
+[data-ba-arrow]::after {
+  content: "";
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -800,6 +987,22 @@ body {
   display: none !important;
 }
 
+@media (min-width: 37.5em) {
+  .about__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .about__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 @media (min-width: 47.99875em) {
   .menu__list {
     -webkit-box-flex: 1;
@@ -834,11 +1037,15 @@ body {
 
 @media (min-width: 87.5em) {
   .title {
+    letter-spacing: 1.875rem;
+  }
+
+  .title {
     font-size: 6.25rem;
   }
 
   .title--margin:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.75rem;
   }
 
   .logo {
@@ -849,8 +1056,24 @@ body {
     padding-top: 2.5rem;
   }
 
-  .portfolio__title._watcher-view {
-    letter-spacing: 3.125rem;
+  main > :first-child {
+    padding-bottom: 2.5rem;
+  }
+
+  main > :not(:first-child) {
+    padding-top: 2.5rem;
+  }
+
+  main > :not(:first-child) {
+    padding-bottom: 2.5rem;
+  }
+
+  .about__inner {
+    gap: 3.125rem;
+  }
+
+  .about__text p {
+    font-size: 2.375rem;
   }
 
   .portfolio__body {
@@ -864,11 +1087,15 @@ body {
 
 @media (max-width: 20em) {
   .title {
-    font-size: 2.5rem;
+    letter-spacing: 0.4375rem;
+  }
+
+  .title {
+    font-size: 2.375rem;
   }
 
   .title--margin:not(:last-child) {
-    margin-bottom: 0.8125rem;
+    margin-bottom: 1.25rem;
   }
 
   .logo {
@@ -876,11 +1103,27 @@ body {
   }
 
   main > :first-child {
-    padding-top: 1.25rem;
+    padding-top: 1.875rem;
   }
 
-  .portfolio__title._watcher-view {
-    letter-spacing: 0.625rem;
+  main > :first-child {
+    padding-bottom: 1.875rem;
+  }
+
+  main > :not(:first-child) {
+    padding-top: 1.875rem;
+  }
+
+  main > :not(:first-child) {
+    padding-bottom: 1.875rem;
+  }
+
+  .about__inner {
+    gap: 1.5625rem;
+  }
+
+  .about__text p {
+    font-size: 1.75rem;
   }
 
   .portfolio__body {
@@ -1016,27 +1259,39 @@ body {
 }
 
 @media (min-width: 20em) and (max-width: 87.5em) {
-@supports (font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem )) {
+@supports (letter-spacing: clamp( 0.4375rem , 0.0115740741rem  +  2.1296296296vw , 1.875rem )) {
     .title {
-      font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem );
+      letter-spacing: clamp( 0.4375rem , 0.0115740741rem  +  2.1296296296vw , 1.875rem );
     }
 }
 
-@supports not (font-size: clamp( 2.5rem , 1.3888888889rem  +  5.5555555556vw , 6.25rem )) {
+@supports not (letter-spacing: clamp( 0.4375rem , 0.0115740741rem  +  2.1296296296vw , 1.875rem )) {
     .title {
-      font-size: calc(2.5rem + 3.75 * (100vw - 20rem) / 67.5);
+      letter-spacing: calc(0.4375rem + 1.4375 * (100vw - 20rem) / 67.5);
     }
 }
 
-@supports (margin-bottom: clamp( 0.8125rem , 0.3125rem  +  2.5vw , 2.5rem )) {
-    .title--margin:not(:last-child) {
-      margin-bottom: clamp( 0.8125rem , 0.3125rem  +  2.5vw , 2.5rem );
+@supports (font-size: clamp( 2.375rem , 1.2268518519rem  +  5.7407407407vw , 6.25rem )) {
+    .title {
+      font-size: clamp( 2.375rem , 1.2268518519rem  +  5.7407407407vw , 6.25rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 0.8125rem , 0.3125rem  +  2.5vw , 2.5rem )) {
+@supports not (font-size: clamp( 2.375rem , 1.2268518519rem  +  5.7407407407vw , 6.25rem )) {
+    .title {
+      font-size: calc(2.375rem + 3.875 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.5092592593rem  +  3.7037037037vw , 3.75rem )) {
     .title--margin:not(:last-child) {
-      margin-bottom: calc(0.8125rem + 1.6875 * (100vw - 20rem) / 67.5);
+      margin-bottom: clamp( 1.25rem , 0.5092592593rem  +  3.7037037037vw , 3.75rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.5092592593rem  +  3.7037037037vw , 3.75rem )) {
+    .title--margin:not(:last-child) {
+      margin-bottom: calc(1.25rem + 2.5 * (100vw - 20rem) / 67.5);
     }
 }
 
@@ -1052,27 +1307,75 @@ body {
     }
 }
 
-@supports (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+@supports (padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
     main > :first-child {
-      padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem );
+      padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem );
     }
 }
 
-@supports not (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+@supports not (padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
     main > :first-child {
-      padding-top: calc(1.25rem + 1.25 * (100vw - 20rem) / 67.5);
+      padding-top: calc(1.875rem + 0.625 * (100vw - 20rem) / 67.5);
     }
 }
 
-@supports (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
-    .portfolio__title._watcher-view {
-      letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem );
+@supports (padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :first-child {
+      padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem );
     }
 }
 
-@supports not (letter-spacing: clamp( 0.625rem , -0.1157407407rem  +  3.7037037037vw , 3.125rem )) {
-    .portfolio__title._watcher-view {
-      letter-spacing: calc(0.625rem + 2.5 * (100vw - 20rem) / 67.5);
+@supports not (padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :first-child {
+      padding-bottom: calc(1.875rem + 0.625 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :not(:first-child) {
+      padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :not(:first-child) {
+      padding-top: calc(1.875rem + 0.625 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :not(:first-child) {
+      padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
+    main > :not(:first-child) {
+      padding-bottom: calc(1.875rem + 0.625 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (gap: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem )) {
+    .about__inner {
+      gap: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem );
+    }
+}
+
+@supports not (gap: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem )) {
+    .about__inner {
+      gap: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (font-size: clamp( 1.75rem , 1.5648148148rem  +  0.9259259259vw , 2.375rem )) {
+    .about__text p {
+      font-size: clamp( 1.75rem , 1.5648148148rem  +  0.9259259259vw , 2.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.75rem , 1.5648148148rem  +  0.9259259259vw , 2.375rem )) {
+    .about__text p {
+      font-size: calc(1.75rem + 0.625 * (100vw - 20rem) / 67.5);
     }
 }
 
