@@ -140,10 +140,6 @@ h6 {
   background: url("../img/icons/moon.svg") center/1.875rem 1.875rem no-repeat;
 }
 
-.light-theme .portfolio__title._watcher-view {
-  opacity: 0.6;
-}
-
 .light-theme .portfolio__title-slide::before {
   background-color: rgba(5, 70, 114, 0.815);
 }
@@ -657,8 +653,7 @@ body {
 }
 
 .about__arrow {
-  background-color: rgba(0, 0, 0, 0.937254902);
-  min-width: 0.75rem;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .about__text {
@@ -901,6 +896,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 [data-ba-before] img {
@@ -927,10 +923,11 @@ body {
   cursor: -webkit-grab;
   cursor: grab;
   position: absolute;
-  left: 50%;
+  left: calc(50% - 37px);
   top: 0;
   height: 100%;
-  width: 0.188rem;
+  width: 75px;
+  pointer-events: all;
   z-index: 2;
 }
 
