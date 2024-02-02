@@ -815,6 +815,9 @@ main > :first-child {
 }
 
 .about__text p {
+  -webkit-transform: scale(0.94);
+      -ms-transform: scale(0.94);
+          transform: scale(0.94);
   line-height: 1.2;
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
           animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
