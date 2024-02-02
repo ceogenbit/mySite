@@ -108,6 +108,10 @@ h6 {
   font-size: inherit;
 }
 
+.dark-theme body {
+  background-color: #03182b;
+}
+
 .light-theme body {
   color: #242423;
   background-color: #e0e7eb;
@@ -126,7 +130,7 @@ h6 {
 }
 
 .light-theme .header__container {
-  background-color: rgba(65, 22, 196, 0.933);
+  background-color: rgba(65, 22, 196, 0.966);
 }
 
 .light-theme .header .menu__link::before {
@@ -134,14 +138,14 @@ h6 {
 }
 
 .light-theme .header .menu__theme-btn {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+          transform: rotate(15deg);
   background: url("../img/icons/moon.svg") center/1.875rem 1.875rem no-repeat;
 }
 
 .light-theme .portfolio__title-slide::before {
-  background-color: rgba(5, 70, 114, 0.9176470588);
+  background-color: rgba(5, 70, 114, 0.9647058824);
 }
 
 .light-theme .portfolio__descr {
@@ -154,7 +158,7 @@ h6 {
 }
 
 .light-theme .footer {
-  background-color: rgba(65, 22, 196, 0.933);
+  background-color: rgba(65, 22, 196, 0.966);
 }
 
 body {
@@ -162,7 +166,6 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #03182b;
   -webkit-transition: background-color 0.5s ease, opacity 0.3s ease;
   transition: background-color 0.5s ease, opacity 0.3s ease;
 }
@@ -647,7 +650,7 @@ body {
 }
 
 .header__container {
-  background-color: rgba(5, 70, 114, 0.9176470588);
+  background-color: rgba(5, 70, 114, 0.9647058824);
   min-height: 3.4375rem;
   border-radius: 0.625rem;
   display: -webkit-box;
@@ -759,17 +762,27 @@ main > :first-child {
 }
 
 .about__body {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-  width: 100%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   border-radius: 68% 32% 63% 37%/42% 60% 40% 58%;
   -webkit-box-shadow: 0.9375rem 0.9375rem 0.625rem -0.1875rem rgba(0, 0, 0, 0.38);
           box-shadow: 0.9375rem 0.9375rem 0.625rem -0.1875rem rgba(0, 0, 0, 0.38);
-  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  width: 100%;
   aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+}
+
+.about__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
 }
 
 .about__item img {
@@ -778,13 +791,21 @@ main > :first-child {
           transform: scale(1.4);
 }
 
-.about__item:nth-child(2) {
-  -webkit-animation: beforeAfter 14s ease infinite;
-          animation: beforeAfter 14s ease infinite;
+.about__item:nth-child(1) img {
+  width: 100%;
 }
 
-.about__arrow {
-  display: none;
+.about__item:nth-child(2) {
+  width: 50%;
+  -webkit-animation: beforeAfter 12s ease infinite;
+          animation: beforeAfter 12s ease infinite;
+}
+
+.about__item:nth-child(2) img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .about__text {
@@ -794,11 +815,13 @@ main > :first-child {
 }
 
 .about__text p {
-  -webkit-transform: scale(0.94);
-      -ms-transform: scale(0.94);
-          transform: scale(0.94);
+  line-height: 1.2;
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
           animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
 }
 
 .about__text p span {
@@ -901,6 +924,11 @@ main > :first-child {
 .about__text p span:nth-child(19) {
   -webkit-animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
           animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.about__text p span:nth-child(20) {
+  -webkit-animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .portfolio__control {
@@ -1022,56 +1050,6 @@ main > :first-child {
   margin-bottom: 0.5rem;
 }
 
-[data-ba] {
-  position: relative;
-}
-
-[data-ba-before] img,
-[data-ba-after] img {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-}
-
-[data-ba-before] img {
-  width: 100%;
-}
-
-[data-ba-after] {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  overflow: hidden;
-}
-
-[data-ba-after] img {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-[data-ba-arrow] {
-  cursor: -webkit-grab;
-  cursor: grab;
-  position: absolute;
-  left: calc(50% - 37px);
-  top: 0;
-  height: 100%;
-  width: 75px;
-  pointer-events: all;
-  z-index: 2;
-}
-
-[data-ba-arrow]::before,
-[data-ba-arrow]::after {
-  content: "";
-}
-
 .swiper {
   overflow: hidden;
 }
@@ -1154,7 +1132,7 @@ main > :first-child {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(65, 22, 196, 0.933);
+    background-color: rgba(65, 22, 196, 0.966);
     -webkit-transition: top 0.3s ease;
     transition: top 0.3s ease;
     z-index: -1;
@@ -1263,7 +1241,7 @@ main > :first-child {
 
 @media (max-width: 47.99875em) {
   .light-theme .header::before {
-    background-color: #7b28ff;
+    background-color: rgba(65, 22, 196, 0.966);
   }
 
   .light-theme .header .menu__list {
@@ -1549,7 +1527,7 @@ main > :first-child {
 
   .portfolio__control .swiper-button-prev svg:hover path,
   .portfolio__control .swiper-button-next svg:hover path {
-    fill: rgba(5, 70, 114, 0.9176470588);
+    fill: rgba(5, 70, 114, 0.9647058824);
   }
 
   .portfolio__link-img img:hover {
