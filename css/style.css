@@ -130,7 +130,7 @@ h6 {
 }
 
 .light-theme .header__container {
-  background-color: rgba(65, 22, 196, 0.966);
+  background-color: rgba(65, 22, 196, 0.95);
 }
 
 .light-theme .header .menu__link::before {
@@ -145,7 +145,7 @@ h6 {
 }
 
 .light-theme .portfolio__title-slide::before {
-  background-color: rgba(5, 70, 114, 0.9647058824);
+  background-color: rgba(5, 70, 114, 0.95);
 }
 
 .light-theme .portfolio__descr {
@@ -158,7 +158,7 @@ h6 {
 }
 
 .light-theme .footer {
-  background-color: rgba(65, 22, 196, 0.966);
+  background-color: rgba(65, 22, 196, 0.95);
 }
 
 body {
@@ -638,7 +638,7 @@ body {
 }
 
 .header {
-  padding: 0.8125rem;
+  padding: 0.9375rem;
 }
 
 .header--position {
@@ -650,7 +650,7 @@ body {
 }
 
 .header__container {
-  background-color: rgba(5, 70, 114, 0.9647058824);
+  background-color: rgba(5, 70, 114, 0.95);
   min-height: 3.4375rem;
   border-radius: 0.625rem;
   display: -webkit-box;
@@ -774,6 +774,11 @@ main > :first-child {
   aspect-ratio: 1/1;
   overflow: hidden;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .about__item {
@@ -1135,7 +1140,7 @@ main > :first-child {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(65, 22, 196, 0.966);
+    background-color: rgba(65, 22, 196, 0.95);
     -webkit-transition: top 0.3s ease;
     transition: top 0.3s ease;
     z-index: -1;
@@ -1244,7 +1249,7 @@ main > :first-child {
 
 @media (max-width: 47.99875em) {
   .light-theme .header::before {
-    background-color: rgba(65, 22, 196, 0.966);
+    background-color: #7b28ff;
   }
 
   .light-theme .header .menu__list {
@@ -1530,7 +1535,7 @@ main > :first-child {
 
   .portfolio__control .swiper-button-prev svg:hover path,
   .portfolio__control .swiper-button-next svg:hover path {
-    fill: rgba(5, 70, 114, 0.9647058824);
+    fill: rgba(5, 70, 114, 0.95);
   }
 
   .portfolio__link-img img:hover {
