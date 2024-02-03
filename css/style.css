@@ -1249,7 +1249,7 @@ main > :first-child {
   }
 
   .header {
-    padding: 0.5rem;
+    padding: 0.625rem;
   }
 
   main > :first-child {
@@ -1453,15 +1453,15 @@ main > :first-child {
     }
 }
 
-@supports (padding: clamp( 0.5rem , 0.3703703704rem  +  0.6481481481vw , 0.9375rem )) {
+@supports (padding: clamp( 0.625rem , 0.5324074074rem  +  0.462962963vw , 0.9375rem )) {
     .header {
-      padding: clamp( 0.5rem , 0.3703703704rem  +  0.6481481481vw , 0.9375rem );
+      padding: clamp( 0.625rem , 0.5324074074rem  +  0.462962963vw , 0.9375rem );
     }
 }
 
-@supports not (padding: clamp( 0.5rem , 0.3703703704rem  +  0.6481481481vw , 0.9375rem )) {
+@supports not (padding: clamp( 0.625rem , 0.5324074074rem  +  0.462962963vw , 0.9375rem )) {
     .header {
-      padding: calc(0.5rem + 0.4375 * (100vw - 20rem) / 67.5);
+      padding: calc(0.625rem + 0.3125 * (100vw - 20rem) / 67.5);
     }
 }
 
