@@ -53,6 +53,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -173,6 +177,45 @@ h6 {
 .light-theme .portfolio .swiper-button-prev svg path,
 .light-theme .portfolio .swiper-button-next svg path {
   fill: #242423;
+}
+
+.light-theme .contact .form > input,
+.light-theme .contact .form textarea {
+  color: #242423;
+}
+
+.light-theme .contact .form > input::-webkit-input-placeholder, .light-theme .contact .form textarea::-webkit-input-placeholder {
+  color: #242423;
+}
+
+.light-theme .contact .form > input::-moz-placeholder, .light-theme .contact .form textarea::-moz-placeholder {
+  color: #242423;
+}
+
+.light-theme .contact .form > input:-ms-input-placeholder, .light-theme .contact .form textarea:-ms-input-placeholder {
+  color: #242423;
+}
+
+.light-theme .contact .form > input::-ms-input-placeholder, .light-theme .contact .form textarea::-ms-input-placeholder {
+  color: #242423;
+}
+
+.light-theme .contact .form > input::placeholder,
+.light-theme .contact .form textarea::placeholder {
+  color: #242423;
+}
+
+.light-theme .contact .form > input:focus,
+.light-theme .contact .form textarea:focus {
+  outline: 0.25rem solid rgba(65, 22, 196, 0.95);
+}
+
+.light-theme .contact .form__button {
+  color: #fff;
+}
+
+.light-theme .contact .form__button::after {
+  background-color: #000;
 }
 
 .light-theme .footer {
@@ -671,7 +714,7 @@ body::-webkit-scrollbar-thumb {
 .header__container {
   background-color: #043959;
   min-height: 3.4375rem;
-  border-radius: 0.625rem;
+  border-radius: 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,6 +1066,7 @@ main > :first-child {
 }
 
 .portfolio__slide {
+  opacity: 0.25;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
@@ -1092,6 +1136,106 @@ main > :first-child {
   margin-bottom: 0.5rem;
 }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.form > input,
+.form textarea {
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+  padding: 1.25rem;
+  background-color: transparent;
+  border-radius: 0.75rem;
+  outline: 0.125rem solid #043959;
+  color: #fff;
+}
+
+.form > input:focus,
+.form textarea:focus {
+  outline: 0.25rem solid #fff;
+}
+
+.form > input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form > input::-moz-placeholder, .form textarea::-moz-placeholder {
+  color: #fff;
+}
+
+.form > input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form > input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form > input::placeholder,
+.form textarea::placeholder {
+  color: #fff;
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 27%;
+          flex: 1 1 27%;
+}
+
+.form__message {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  resize: none;
+}
+
+.form__button {
+  padding: 1rem 2.5rem 0.9375rem;
+  line-height: 1.2;
+  font-weight: 600;
+  border-radius: 1.5625rem;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.form__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(65, 22, 196, 0.95);
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+  z-index: -1;
+}
+
+.form__button::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #043959;
+  -webkit-transition: bottom 0.3s ease;
+  transition: bottom 0.3s ease;
+  z-index: -1;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -1140,6 +1284,15 @@ main > :first-child {
   display: none !important;
 }
 
+@media (min-width: 29.99875em) {
+  .form__button {
+    margin: 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+
 @media (min-width: 37.49875em) {
   .about__inner {
     -webkit-box-orient: horizontal;
@@ -1162,8 +1315,8 @@ main > :first-child {
   }
 
   .menu__link {
-    padding: 0.3125rem 0.75rem 0.3125rem;
-    font-size: 1.25rem;
+    padding: 0.3125rem 0.75rem;
+    line-height: 1.3;
     position: relative;
   }
 
@@ -1179,6 +1332,22 @@ main > :first-child {
     transition: top 0.3s ease;
     z-index: -1;
   }
+
+  .portfolio__slide {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 47.99875em) and (min-width: 85.625em) {
+  .menu__link {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 85.625em) {
+  .logo {
+    width: 9.375rem;
+  }
 }
 
 @media (min-width: 87.5em) {
@@ -1192,10 +1361,6 @@ main > :first-child {
 
   .title--margin:not(:last-child) {
     margin-bottom: 2.8125rem;
-  }
-
-  .logo {
-    width: 9.375rem;
   }
 
   .header {
@@ -1229,6 +1394,10 @@ main > :first-child {
   .portfolio__title-slide {
     font-size: 2.375rem;
   }
+
+  .form {
+    font-size: 1.375rem;
+  }
 }
 
 @media (max-width: 20em) {
@@ -1242,10 +1411,6 @@ main > :first-child {
 
   .title--margin:not(:last-child) {
     margin-bottom: 1.25rem;
-  }
-
-  .logo {
-    width: 8.4375rem;
   }
 
   .header {
@@ -1279,6 +1444,10 @@ main > :first-child {
   .portfolio__title-slide {
     font-size: 1.875rem;
   }
+
+  .form {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -1288,6 +1457,10 @@ main > :first-child {
 
   .light-theme .header .menu__list {
     background-color: #7a28ff;
+  }
+
+  .logo {
+    width: 8.4375rem;
   }
 
   .menu__list--position {
@@ -1379,8 +1552,8 @@ main > :first-child {
             transform: rotate(45deg);
   }
 
-  .portfolio__slide.swiper-slide-next {
-    opacity: 0.25;
+  .portfolio__slide.swiper-slide-active {
+    opacity: 1;
   }
 }
 
@@ -1438,18 +1611,6 @@ main > :first-child {
 @supports not (margin-bottom: clamp( 1.25rem , 0.787037037rem  +  2.3148148148vw , 2.8125rem )) {
     .title--margin:not(:last-child) {
       margin-bottom: calc(1.25rem + 1.5625 * (100vw - 20rem) / 67.5);
-    }
-}
-
-@supports (width: clamp( 8.4375rem , 8.1597222222rem  +  1.3888888889vw , 9.375rem )) {
-    .logo {
-      width: clamp( 8.4375rem , 8.1597222222rem  +  1.3888888889vw , 9.375rem );
-    }
-}
-
-@supports not (width: clamp( 8.4375rem , 8.1597222222rem  +  1.3888888889vw , 9.375rem )) {
-    .logo {
-      width: calc(8.4375rem + 0.9375 * (100vw - 20rem) / 67.5);
     }
 }
 
@@ -1548,6 +1709,52 @@ main > :first-child {
       font-size: calc(1.875rem + 0.5 * (100vw - 20rem) / 67.5);
     }
 }
+
+@supports (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+    .form {
+      font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+    .form {
+      font-size: calc(1.25rem + 0.125 * (100vw - 20rem) / 67.5);
+    }
+}
+}
+
+@media (min-width: 47.99875em) and (max-width: 85.625em) {
+@supports (width: clamp( 8.4375rem , 7.2415575894rem  +  2.4916115744vw , 9.375rem )) {
+    .logo {
+      width: clamp( 8.4375rem , 7.2415575894rem  +  2.4916115744vw , 9.375rem );
+    }
+}
+
+@supports not (width: clamp( 8.4375rem , 7.2415575894rem  +  2.4916115744vw , 9.375rem )) {
+    .logo {
+      width: calc(8.4375rem + 0.9375 * (100vw - 47.99875rem) / 37.62625);
+    }
+}
+}
+
+@media (min-width: 47.99875em) and (min-width: 47.99875em) and (max-width: 85.625em) {
+@supports (font-size: clamp( 1.125rem , 0.9655410119rem  +  0.3322148766vw , 1.25rem )) {
+    .menu__link {
+      font-size: clamp( 1.125rem , 0.9655410119rem  +  0.3322148766vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.9655410119rem  +  0.3322148766vw , 1.25rem )) {
+    .menu__link {
+      font-size: calc(1.125rem + 0.125 * (100vw - 47.99875rem) / 37.62625);
+    }
+}
+}
+
+@media (min-width: 47.99875em) and (max-width: 47.99875em) {
+  .menu__link {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 47.99875em) and (min-width: 29.99875em) {
@@ -1580,5 +1787,13 @@ main > :first-child {
 
   .portfolio__link:hover::before {
     left: 0;
+  }
+
+  .form__button:hover::before {
+    top: 100%;
+  }
+
+  .form__button:hover::after {
+    bottom: 0;
   }
 }

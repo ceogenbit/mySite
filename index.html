@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240203013254">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240205233344">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
 				<nav class="header__menu menu">
 					<ul class="menu__list menu__list--position">
 						<li class="menu__item">
-							<a class="menu__link" href="#" aria-label="Go to the section"><span>about me</span></a>
+							<a class="menu__link" href="#about" aria-label="Go to the section"><span>about me</span></a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
@@ -49,7 +49,10 @@
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>skills</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#" aria-label="Go to the"><span>my works</span></a>
+							<a class="menu__link" href="#portfolio" aria-label="Go to the"><span>my works</span></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#contact" aria-label="Go to the"><span>contact</span></a>
 						</li>
 					</ul>
 					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
@@ -58,7 +61,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="about">
+			<section class="about" id="about">
 				<div class="about__container">
 					<h1 class="about__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>About me</h1>
 					<div class="about__inner">
@@ -98,7 +101,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="portfolio">
+			<section class="portfolio" id="portfolio">
 				<div class="portfolio__container">
 					<h2 class="portfolio__title title title--margin" max-width: data-watch-threshold="1" data-watch-once data-watch>My works</h2>
 					<div class="portfolio__slider swiper">
@@ -169,6 +172,18 @@
 							</svg>
 						</button>
 					</div>
+				</div>
+			</section>
+			<section class="contact" id="contact">
+				<div class="contact__container">
+					<h2 class="contacts__title title title--margin">Contact</h2>
+					<form class="contact__form form" action="#">
+						<input class="form__input" type="text" value="" required name="name" placeholder="full name">
+						<input class="form__input" type="email" required name="email" placeholder="email address">
+						<input class="form__input" type="tel" name="tel" placeholder="mobile number">
+						<textarea class="form__message" required name="message" cols="60" rows="10" placeholder="your message"></textarea>
+						<button class="form__button" type="submit">Submit</button>
+					</form>
 				</div>
 			</section>
 			<!-- <section class="skills" id="skills">
@@ -242,7 +257,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240203013254"></script>
+	<script src="js/app.min.js?_v=20240205233344"></script>
 </body>
 
 </html>
