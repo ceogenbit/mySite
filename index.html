@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240206224019">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240207002055">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
 				<nav class="header__menu menu">
 					<ul class="menu__list menu__list--position">
 						<li class="menu__item">
-							<a class="menu__link" href="#about" aria-label="Go to the section"><span>about me</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#about" data-goto-speed="1000" aria-label="Go to the section"><span>about me</span></a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
@@ -49,10 +49,10 @@
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>skills</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#portfolio" aria-label="Go to the"><span>my works</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" data-goto-speed="1000" aria-label="Go to the"><span>my works</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#contact" aria-label="Go to the"><span>contact</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#contact" data-goto-speed="1000" aria-label="Go to the"><span>contact</span></a>
 						</li>
 					</ul>
 					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
@@ -176,7 +176,7 @@
 			</section>
 			<section class="contact" id="contact">
 				<div class="contact__container">
-					<h2 class="contacts__title title title--margin">Contact</h2>
+					<h2 class="contact__title title title--margin">Contact</h2>
 					<form class="contact__form form" action="#">
 						<input class="form__input" type="text" value="" required name="name" placeholder="full name">
 						<input class="form__input" type="email" required name="email" placeholder="email address">
@@ -257,7 +257,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240206224019"></script>
+	<script src="js/app.min.js?_v=20240207002055"></script>
 </body>
 
 </html>

@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @font-face {
   font-family: "JosefinSans";
   font-display: swap;
@@ -214,10 +212,6 @@ h6 {
   color: #fff;
 }
 
-.light-theme .contact .form__button::after {
-  background-color: #000;
-}
-
 .light-theme .footer {
   background-color: rgba(65, 22, 196, 0.95);
 }
@@ -228,8 +222,8 @@ body {
       -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-transition: background-color 0.5s ease, opacity 0.3s ease;
-  transition: background-color 0.5s ease, opacity 0.3s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 body::-webkit-scrollbar,
@@ -277,13 +271,6 @@ body::-webkit-scrollbar-thumb {
 .wrapper > * {
   min-width: 0;
 }
-
-/*
-(i) Стилі будуть застосовуватись до
-всіх класів, що містять *__container
-Наприклад header__container, main__container і т.п.
-Сніппет (HTML): cnt
-*/
 
 [class*=__container] {
   max-width: 87.5rem;
@@ -810,16 +797,6 @@ main > :first-child {
           align-items: center;
 }
 
-.about__title {
-  opacity: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
-
-.about__title._watcher-view {
-  opacity: 1;
-}
-
 .about__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1196,7 +1173,7 @@ main > :first-child {
 }
 
 .form__button {
-  padding: 1rem 2.5rem 0.9375rem;
+  padding: 1.0625rem 2.5rem 0.9375rem;
   line-height: 1.2;
   font-weight: 600;
   border-radius: 1.5625rem;
@@ -1230,7 +1207,7 @@ main > :first-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #043959;
+  background-color: #000;
   -webkit-transition: bottom 0.3s ease;
   transition: bottom 0.3s ease;
   z-index: -1;
@@ -1360,7 +1337,7 @@ main > :first-child {
   }
 
   .title--margin:not(:last-child) {
-    margin-bottom: 2.8125rem;
+    margin-bottom: 3.125rem;
   }
 
   .header {
@@ -1410,7 +1387,7 @@ main > :first-child {
   }
 
   .title--margin:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5625rem;
   }
 
   .header {
@@ -1602,15 +1579,15 @@ main > :first-child {
     }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 0.787037037rem  +  2.3148148148vw , 2.8125rem )) {
+@supports (margin-bottom: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem )) {
     .title--margin:not(:last-child) {
-      margin-bottom: clamp( 1.25rem , 0.787037037rem  +  2.3148148148vw , 2.8125rem );
+      margin-bottom: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 0.787037037rem  +  2.3148148148vw , 2.8125rem )) {
+@supports not (margin-bottom: clamp( 1.5625rem , 1.099537037rem  +  2.3148148148vw , 3.125rem )) {
     .title--margin:not(:last-child) {
-      margin-bottom: calc(1.25rem + 1.5625 * (100vw - 20rem) / 67.5);
+      margin-bottom: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 67.5);
     }
 }
 
