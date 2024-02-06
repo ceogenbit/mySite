@@ -3414,6 +3414,25 @@
             saveTheme ? localStorage.setItem("user-theme", newTheme) : null;
         }
     }
+    const script_form = document.querySelector(".form");
+    script_form.addEventListener("submit", (function(e) {
+        e.preventDefault();
+        sendMessage(script_form);
+    }));
+    async function sendMessage(form) {
+        const formData = new formData(form);
+        if (formData) {
+            const url = "sendmessage.php";
+            const response = await fetch(url, {
+                method: "POST",
+                body: formData
+            });
+            if (response.ok) {
+                form.reset();
+                alert("Form sent!");
+            } else alert("Error");
+        }
+    }
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
