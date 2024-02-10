@@ -1,21 +1,13 @@
 @font-face {
-  font-family: "JosefinSans";
+  font-family: JosefinSans;
   font-display: swap;
-  src: url("../fonts/JosefinSans-Bold.woff2") format("woff2"), url("../fonts/JosefinSans-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/JosefinSans-Medium.woff2") format("woff2"), url("../fonts/JosefinSans-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "JosefinSans";
-  font-display: swap;
-  src: url("../fonts/JosefinSans-Regular.woff2") format("woff2"), url("../fonts/JosefinSans-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
+  font-family: Nunito;
   font-display: swap;
   src: url("../fonts/Nunito-Bold.woff2") format("woff2"), url("../fonts/Nunito-Bold.woff") format("woff");
   font-weight: 700;
@@ -23,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: Nunito;
   font-display: swap;
   src: url("../fonts/Nunito-Regular.woff2") format("woff2"), url("../fonts/Nunito-Regular.woff") format("woff");
   font-weight: 400;
@@ -31,7 +23,7 @@
 }
 
 @font-face {
-  font-family: "TitanOne";
+  font-family: TitanOne;
   font-display: swap;
   src: url("../fonts/TitanOne-Regular.woff2") format("woff2"), url("../fonts/TitanOne-Regular.woff") format("woff");
   font-weight: 400;
@@ -124,7 +116,7 @@ h6 {
 }
 
 .light-theme body {
-  color: #242423;
+  color: #000000;
   background-color: #e0e7eb;
 }
 
@@ -134,7 +126,7 @@ h6 {
 }
 
 .light-theme body::-webkit-scrollbar-thumb {
-  background-color: #242423;
+  background-color: #000000;
 }
 
 .light-theme body .area {
@@ -174,33 +166,33 @@ h6 {
 
 .light-theme .portfolio .swiper-button-prev svg path,
 .light-theme .portfolio .swiper-button-next svg path {
-  fill: #242423;
+  fill: #000000;
 }
 
 .light-theme .contact .form > input,
 .light-theme .contact .form textarea {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input::-webkit-input-placeholder, .light-theme .contact .form textarea::-webkit-input-placeholder {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input::-moz-placeholder, .light-theme .contact .form textarea::-moz-placeholder {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input:-ms-input-placeholder, .light-theme .contact .form textarea:-ms-input-placeholder {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input::-ms-input-placeholder, .light-theme .contact .form textarea::-ms-input-placeholder {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input::placeholder,
 .light-theme .contact .form textarea::placeholder {
-  color: #242423;
+  color: #000000;
 }
 
 .light-theme .contact .form > input:focus,
@@ -380,7 +372,7 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 0.75rem;
+  border-radius: 1.875rem;
   gap: 0.9375rem;
   width: 100%;
   max-width: 56.25rem;
@@ -1027,6 +1019,7 @@ main > :first-child {
           transform: scale(0.94);
   line-height: 1.2;
   text-align: center;
+  font-weight: 500;
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
           animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -1242,6 +1235,7 @@ main > :first-child {
 
 .portfolio__link {
   display: inline-block;
+  line-height: 1.27;
   position: relative;
 }
 
@@ -1252,7 +1246,7 @@ main > :first-child {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(5, 70, 114, 0.6117647059);
+  background-color: rgba(18, 111, 173, 0.801);
   z-index: -1;
   -webkit-transition: left 0.4s ease;
   transition: left 0.4s ease;
