@@ -10,13 +10,14 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240207002055">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240210211248">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<!-- <div class="spinner" id="preloader"></div> -->
 	<div class="area">
 		<ul class="area__circles">
 			<li></li>
@@ -40,7 +41,7 @@
 				<nav class="header__menu menu">
 					<ul class="menu__list menu__list--position">
 						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#about" data-goto-speed="1000" aria-label="Go to the section"><span>about me</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#about" aria-label="Go to the section"><span>about me</span></a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
@@ -49,10 +50,10 @@
 							<a class="menu__link" href="#" aria-label="Go to the section"><span>skills</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" data-goto-speed="1000" aria-label="Go to the"><span>my works</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" aria-label="Go to the"><span>my works</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#contact" data-goto-speed="1000" aria-label="Go to the"><span>contact</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#contact" aria-label="Go to the"><span>contact</span></a>
 						</li>
 					</ul>
 					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
@@ -103,7 +104,7 @@
 			</section>
 			<section class="portfolio" id="portfolio">
 				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin" max-width: data-watch-threshold="1" data-watch-once data-watch>My works</h2>
+					<h2 class="portfolio__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>My works</h2>
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__slide swiper-slide">
@@ -177,10 +178,10 @@
 			<section class="contact" id="contact">
 				<div class="contact__container">
 					<h2 class="contact__title title title--margin">Contact</h2>
-					<form class="contact__form form" action="#">
+					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="sendmail.php" method="POST">
 						<input class="form__input" type="text" value="" required name="name" placeholder="full name">
 						<input class="form__input" type="email" required name="email" placeholder="email address">
-						<input class="form__input" type="tel" name="tel" placeholder="mobile number">
+						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
 						<textarea class="form__message" required name="message" cols="60" rows="7" placeholder="your message"></textarea>
 						<button class="form__button" type="submit">Send</button>
 					</form>
@@ -257,7 +258,20 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240207002055"></script>
+	<div id="form-sent" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<span>success!</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255)">
+						<path d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm3.493-13a1.494 1.494 0 1 1-.001 2.987A1.494 1.494 0 0 1 15.493 9zm-4.301 6.919a4.108 4.108 0 0 0 1.616 0c.253-.052.505-.131.75-.233.234-.1.464-.224.679-.368.208-.142.407-.306.591-.489.183-.182.347-.381.489-.592l1.658 1.117a6.027 6.027 0 0 1-1.619 1.621 6.003 6.003 0 0 1-2.149.904 6.116 6.116 0 0 1-2.414-.001 5.919 5.919 0 0 1-2.148-.903 6.078 6.078 0 0 1-1.621-1.622l1.658-1.117c.143.211.307.41.488.59a3.988 3.988 0 0 0 2.022 1.093zM8.5 9a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 8.5 9z"></path>
+					</svg>
+				</div>
+				<button data-close type="button" class="popup__close">close</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240210211248"></script>
 </body>
 
 </html>
