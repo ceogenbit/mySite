@@ -10,14 +10,213 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240211000852">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240211185901">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<!-- <div class="spinner" id="preloader"></div> -->
+	<!-- START LOADER -->
+	<div id="loader-wrapper">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<!-- END LOADER -->
+
+	<style>
+		/*START LOADER DESIGN*/
+		#loader-wrapper {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+		}
+
+		#loading-center-absolute {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 200px;
+			width: 200px;
+			margin-top: -100px;
+			margin-left: -100px;
+			-ms-transform: rotate(-135deg);
+			-moz-transform: rotate(-135deg);
+			-webkit-transform: rotate(-135deg);
+			transform: rotate(-135deg);
+			z-index: 1001;
+		}
+
+		.object {
+			-moz-border-radius: 50% 50% 50% 50%;
+			-webkit-border-radius: 50% 50% 50% 50%;
+			border-radius: 50% 50% 50% 50%;
+			position: absolute;
+			border-top: 5px solid #fff;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid #fff;
+			border-right: 5px solid transparent;
+			-webkit-animation: animate 2s infinite;
+			animation: animate 2s infinite;
+		}
+
+		#object_one {
+			left: 75px;
+			top: 75px;
+			width: 50px;
+			height: 50px;
+		}
+
+		#object_two {
+			left: 65px;
+			top: 65px;
+			width: 70px;
+			height: 70px;
+			-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s;
+		}
+
+		#object_three {
+			left: 55px;
+			top: 55px;
+			width: 90px;
+			height: 90px;
+			-webkit-animation-delay: 0.4s;
+			animation-delay: 0.4s;
+		}
+
+		#object_four {
+			left: 45px;
+			top: 45px;
+			width: 110px;
+			height: 110px;
+			-webkit-animation-delay: 0.6s;
+			animation-delay: 0.6s;
+		}
+
+		@-webkit-keyframes animate {
+			50% {
+				-ms-transform: rotate(360deg) scale(0.8);
+				-moz-transform: rotate(360deg) scale(0.8);
+				-webkit-transform: rotate(360deg) scale(0.8);
+				transform: rotate(360deg) scale(0.8);
+			}
+		}
+
+		@keyframes animate {
+
+			50% {
+				-ms-transform: rotate(360deg) scale(0.8);
+				-moz-transform: rotate(360deg) scale(0.8);
+				-webkit-transform: rotate(360deg) scale(0.8);
+				transform: rotate(360deg) scale(0.8);
+			}
+		}
+
+		#loader-wrapper .loader-section {
+			position: fixed;
+			top: 0;
+			width: 51%;
+			height: 100%;
+			background-color: #4116c4;
+			z-index: 999;
+			-webkit-transform: translateX(0);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-moz-transform: translateX(0);
+			-ms-transform: translateX(0);
+			/* IE 9 */
+			transform: translateX(0);
+			/* Firefox 16+, IE 10+, Opera */
+		}
+
+		#loader-wrapper .loader-section.section-left {
+			left: 0;
+		}
+
+		#loader-wrapper .loader-section.section-right {
+			right: 0;
+		}
+
+		.loaded #loading-center-absolute {
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+
+		/* Loaded */
+		.loaded #loader-wrapper .loader-section.section-left {
+			-webkit-transform: translateX(-100%);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-moz-transform: translateX(-100%);
+			-ms-transform: translateX(-100%);
+			/* IE 9 */
+			transform: translateX(-100%);
+			/* Firefox 16+, IE 10+, Opera */
+			-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+			transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		}
+
+		.loaded #loader-wrapper .loader-section.section-right {
+			-webkit-transform: translateX(100%);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-ms-transform: translateX(100%);
+			/* IE 9 */
+			-moz-transform: translateX(100%);
+			transform: translateX(100%);
+			/* Firefox 16+, IE 10+, Opera */
+			-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+			transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		}
+
+		.loaded #loader-wrapper {
+			visibility: hidden;
+			-webkit-transform: translateY(-100%);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-ms-transform: translateY(-100%);
+			/* IE 9 */
+			-moz-transform: translateY(-100%);
+			transform: translateY(-100%);
+			/* Firefox 16+, IE 10+, Opera */
+			-webkit-transition: all 0.5s 1s ease-out;
+			transition: all 0.3s 1s ease-out;
+		}
+
+		.v_blue #loader-wrapper .loader-section,
+		.v_navy_blue #loader-wrapper .loader-section {
+			background-color: #121a6d;
+		}
+
+		.v_dark #loader-wrapper .loader-section,
+		.v_light_dark #loader-wrapper .loader-section {
+			background-color: #030307;
+		}
+
+		.v_blue_light #loader-wrapper .loader-section,
+		.v_royal_blue #loader-wrapper .loader-section {
+			background-color: #081990;
+		}
+
+		.v_light_purple #loader-wrapper .loader-section {
+			background-color: #4e0094;
+		}
+
+		.v_cyan_blue #loader-wrapper .loader-section,
+		.v_cyan_blue .spop {
+			background-color: #0e082c;
+		}
+
+		/*END PRELOADER DESIGN*/
+	</style>
 	<div class="area">
 		<ul class="area__circles">
 			<li></li>
@@ -64,7 +263,7 @@
 		<main class="page">
 			<section class="about" id="about">
 				<div class="about__container">
-					<h1 class="about__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>About me</h1>
+					<h1 class="about__title title title--margin">About me</h1>
 					<div class="about__inner">
 						<div class="about__body">
 							<div class="about__item">
@@ -104,7 +303,7 @@
 			</section>
 			<section class="portfolio" id="portfolio">
 				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>My works</h2>
+					<h2 class="portfolio__title title title--margin">My works</h2>
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__slide swiper-slide">
@@ -178,7 +377,7 @@
 			<section class="contact" id="contact">
 				<div class="contact__container">
 					<h2 class="contact__title title title--margin">Contact</h2>
-					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="sendmail.php" method="POST">
+					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="components/sendmail/sendmail.php" method="POST">
 						<input class="form__input" type="text" required name="name" placeholder="full name">
 						<input class="form__input" type="email" required name="email" placeholder="email address">
 						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
@@ -271,7 +470,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240211000852"></script>
+	<script src="js/app.min.js?_v=20240211185901"></script>
 </body>
 
 </html>
