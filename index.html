@@ -10,13 +10,265 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240211185901">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240212233258">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="area">
+		<ul class="area__circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<header class="header header--position">
+			<div class="header__container">
+				<img class="logo logo--position" src="img/logo.svg" alt="Logo">
+				<nav class="header__menu menu">
+					<ul class="menu__list menu__list--position">
+						<li class="menu__item">
+							<a class="menu__link" href="#" data-goto-header data-goto="#about" aria-label="Go to the section"><span>about me</span></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#" data-goto-header data-goto="#skills" aria-label="Go to the section"><span>skills</span></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" aria-label="Go to the"><span>my works</span></a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#" data-goto-header data-goto="#contact" aria-label="Go to the"><span>contact</span></a>
+						</li>
+					</ul>
+					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
+					<button type="button" class="menu__icon icon-menu" aria-label="Open the mobile menu"><span></span></button>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<section class="about" id="about">
+				<div class="about__container">
+					<h1 class="about__title title title--margin">About me</h1>
+					<div class="about__inner">
+						<div class="about__body">
+							<div class="about__item">
+								<picture><source srcset="img/about/my-photo-original.webp" type="image/webp"><img src="img/about/my-photo-original.webp" alt="My photo red edition"></picture>
+							</div>
+							<div class="about__item">
+								<picture><source srcset="img/about/my-photo.webp" type="image/webp"><img src="img/about/my-photo.webp" alt="My original photo"></picture>
+							</div>
+						</div>
+						<div class="about__text">
+							<p>
+								<span>Hello</span>
+								<span>everyone!</span>
+								<span>My</span>
+								<span>name</span>
+								<span>is</span>
+								<span>Dima.</span>
+								<span>I'm</span>
+								<span>a</span>
+								<span>Front-End</span>
+								<span>Developer.</span>
+								<span>I</span>
+								<span>like</span>
+								<span>HTML,</span>
+								<span>CSS</span>
+								<span>and</span>
+								<span>JavaScript.</span>
+								<span>VSCode</span>
+								<span>is</span>
+								<span>my</span>
+								<span>favorite</span>
+								<span>program.</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio" id="portfolio">
+				<div class="portfolio__container">
+					<h2 class="portfolio__title title title--margin">My works</h2>
+					<div class="portfolio__slider swiper">
+						<div class="portfolio__wrapper swiper-wrapper">
+							<div class="portfolio__slide swiper-slide">
+								<article class="portfolio__body">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank" aria-label="My work The Wild Kingdom">
+										<picture><source srcset="img/portfolio/the-wild-kingdom.webp" type="image/webp"><img src="img/portfolio/the-wild-kingdom.webp" alt="The Wild Kingdom"></picture>
+									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">The Wild Kingdom</a>
+									</h3>
+									<div class="portfolio__descr">
+										<p>A better world for pets</p>
+									</div>
+								</article>
+							</div>
+							<div class="portfolio__slide swiper-slide">
+								<article class="portfolio__body">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/interia/" target="_blank">
+										<picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.webp" alt="Interia"></picture>
+									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">Interia</a>
+									</h3>
+									<div class="portfolio__descr">
+										<p>Blending creativity and functionality in every design</p>
+									</div>
+								</article>
+							</div>
+							<div class="portfolio__slide swiper-slide">
+								<article class="portfolio__body">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/eatly/" target="_blank">
+										<picture><source srcset="img/portfolio/eatly.webp" type="image/webp"><img src="img/portfolio/eatly.webp" alt="Eatly"></picture>
+									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">Eatly</a>
+									</h3>
+									<div class="portfolio__descr">
+										<p>Enjoy foods all over the world</p>
+									</div>
+								</article>
+							</div>
+							<div class="portfolio__slide swiper-slide">
+								<article class="portfolio__body">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/coffee/" target="_blank">
+										<picture><source srcset="img/portfolio/coffee.webp" type="image/webp"><img src="img/portfolio/coffee.webp" alt="Coffee"></picture>
+									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">Coffee</a>
+									</h3>
+									<div class="portfolio__descr">
+										<p>Discover the best coffee</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__control">
+						<button type="button" class="swiper-button-prev" aria-label="Next slide">
+							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
+							</svg>
+						</button>
+						<button type="button" class="swiper-button-next" aria-label="Next slide">
+							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="skills" id="skills">
+				<div class="skills__container">
+					<h2 class="skills__title title title--margin">My skills</h2>
+					<div class="skills__body">
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">HTML</strong>
+								<div class="skills__procents">90%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">CSS</strong>
+								<div class="skills__procents">80%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">JavaScript</strong>
+								<div class="skills__procents">60%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">SASS (SCSS)</strong>
+								<div class="skills__procents">70%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">Git/GitHub</strong>
+								<div class="skills__procents">65%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+						<div class="skills__skill">
+							<div class="skills__skill-inner">
+								<strong class="skills__skill-name">BEM</strong>
+								<div class="skills__procents">85%</div>
+							</div>
+							<div class="skills__progress"><span></span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact" id="contact">
+				<div class="contact__container">
+					<h2 class="contact__title title title--margin">Contact</h2>
+					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="components/sendmail/sendmail.php" method="POST">
+						<input class="form__input" type="text" required name="name" placeholder="full name">
+						<input class="form__input" type="email" required name="email" placeholder="email address">
+						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
+						<textarea class="form__message" required name="message" cols="60" rows="7" placeholder="your message"></textarea>
+						<button class="form__button" type="submit">Send</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<img class="logo" src="img/logo.svg" alt="Logo">
+				<ul class="footer__socials">
+					<li class="footer__item">
+						<a class="footer__link" href="https://www.instagram.com/dims_web/" target="_blank" aria-label="My instagram">
+							<img src="img/icons/instagram.svg" alt="Instagram">
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="https://www.facebook.com/dims.dh/" target="_blank" aria-label="My facebook">
+							<img src="img/icons/facebook.svg" alt="Facebook">
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="#" target="_blank">
+							<img src="img/icons/linckedin.svg" alt="Linckedin" aria-label="My linckedin">
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="https://github.com/ceogenbit" target="_blank" aria-label="My github">
+							<img src="img/icons/github.svg" alt="GitHub">
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="https://t.me/+48575145837" target="_blank">
+							<img src="img/icons/telegram.svg" alt="Telegram" aria-label="My telegram">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
 	<!-- START LOADER -->
 	<div id="loader-wrapper">
 		<div id="loading-center-absolute">
@@ -217,246 +469,6 @@
 
 		/*END PRELOADER DESIGN*/
 	</style>
-	<div class="area">
-		<ul class="area__circles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-	<div class="wrapper">
-		<header class="header header--position">
-			<div class="header__container">
-				<img class="logo logo--position" src="img/logo.svg" alt="Logo">
-				<nav class="header__menu menu">
-					<ul class="menu__list menu__list--position">
-						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#about" aria-label="Go to the section"><span>about me</span></a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#" aria-label="Go to the section"><span>skills</span></a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" aria-label="Go to the"><span>my works</span></a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#contact" aria-label="Go to the"><span>contact</span></a>
-						</li>
-					</ul>
-					<button class="menu__theme-btn" type="button" aria-label="Change the page theme"></button>
-					<button type="button" class="menu__icon icon-menu" aria-label="Open the mobile menu"><span></span></button>
-				</nav>
-			</div>
-		</header>
-		<main class="page">
-			<section class="about" id="about">
-				<div class="about__container">
-					<h1 class="about__title title title--margin">About me</h1>
-					<div class="about__inner">
-						<div class="about__body">
-							<div class="about__item">
-								<picture><source srcset="img/about/my-photo-original.webp" type="image/webp"><img src="img/about/my-photo-original.webp" alt="My photo red edition"></picture>
-							</div>
-							<div class="about__item">
-								<picture><source srcset="img/about/my-photo.webp" type="image/webp"><img src="img/about/my-photo.webp" alt="My original photo"></picture>
-							</div>
-						</div>
-						<div class="about__text">
-							<p>
-								<span>Hello</span>
-								<span>everyone!</span>
-								<span>My</span>
-								<span>name</span>
-								<span>is</span>
-								<span>Dima.</span>
-								<span>I'm</span>
-								<span>a</span>
-								<span>Front-End</span>
-								<span>Developer.</span>
-								<span>I</span>
-								<span>like</span>
-								<span>HTML,</span>
-								<span>CSS</span>
-								<span>and</span>
-								<span>JavaScript.</span>
-								<span>VSCode</span>
-								<span>is</span>
-								<span>my</span>
-								<span>favorite</span>
-								<span>program.</span>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="portfolio" id="portfolio">
-				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin">My works</h2>
-					<div class="portfolio__slider swiper">
-						<div class="portfolio__wrapper swiper-wrapper">
-							<div class="portfolio__slide swiper-slide">
-								<article class="portfolio__body">
-									<a class="portfolio__link-img" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank" aria-label="My work The Wild Kingdom">
-										<picture><source srcset="img/portfolio/the-wild-kingdom.webp" type="image/webp"><img src="img/portfolio/the-wild-kingdom.webp" alt="The Wild Kingdom"></picture>
-									</a>
-									<h3 class="portfolio__title-slide">
-										<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">The Wild Kingdom</a>
-									</h3>
-									<div class="portfolio__descr">
-										<p>A better world for pets</p>
-									</div>
-								</article>
-							</div>
-							<div class="portfolio__slide swiper-slide">
-								<article class="portfolio__body">
-									<a class="portfolio__link-img" href="https://ceogenbit.github.io/interia/" target="_blank">
-										<picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.webp" alt="Interia"></picture>
-									</a>
-									<h3 class="portfolio__title-slide">
-										<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">Interia</a>
-									</h3>
-									<div class="portfolio__descr">
-										<p>Blending creativity and functionality in every design</p>
-									</div>
-								</article>
-							</div>
-							<div class="portfolio__slide swiper-slide">
-								<article class="portfolio__body">
-									<a class="portfolio__link-img" href="https://ceogenbit.github.io/eatly/" target="_blank">
-										<picture><source srcset="img/portfolio/eatly.webp" type="image/webp"><img src="img/portfolio/eatly.webp" alt="Eatly"></picture>
-									</a>
-									<h3 class="portfolio__title-slide">
-										<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">Eatly</a>
-									</h3>
-									<div class="portfolio__descr">
-										<p>Enjoy foods all over the world</p>
-									</div>
-								</article>
-							</div>
-							<div class="portfolio__slide swiper-slide">
-								<article class="portfolio__body">
-									<a class="portfolio__link-img" href="https://ceogenbit.github.io/coffee/" target="_blank">
-										<picture><source srcset="img/portfolio/coffee.webp" type="image/webp"><img src="img/portfolio/coffee.webp" alt="Coffee"></picture>
-									</a>
-									<h3 class="portfolio__title-slide">
-										<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">Coffee</a>
-									</h3>
-									<div class="portfolio__descr">
-										<p>Discover the best coffee</p>
-									</div>
-								</article>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio__control">
-						<button type="button" class="swiper-button-prev" aria-label="Next slide">
-							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
-							</svg>
-						</button>
-						<button type="button" class="swiper-button-next" aria-label="Next slide">
-							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
-							</svg>
-						</button>
-					</div>
-				</div>
-			</section>
-			<section class="contact" id="contact">
-				<div class="contact__container">
-					<h2 class="contact__title title title--margin">Contact</h2>
-					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="components/sendmail/sendmail.php" method="POST">
-						<input class="form__input" type="text" required name="name" placeholder="full name">
-						<input class="form__input" type="email" required name="email" placeholder="email address">
-						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
-						<textarea class="form__message" required name="message" cols="60" rows="7" placeholder="your message"></textarea>
-						<button class="form__button" type="submit">Send</button>
-					</form>
-				</div>
-			</section>
-			<!-- <section class="skills" id="skills">
-					<div class="skills__container" id="smooth-content">
-						<h2 class="skills__title title title--margin" data-watch-threshold="1" data-watch-once data-watch>Skills</h2>
-						<ul class="skills__list">
-							<li class="skills__item">
-								<h3 class="skills__title-item">html</h3>
-								<div class="skills__progress skills__progress--html">
-									<span></span>
-								</div>
-							</li>
-							<li class="skills__item">
-								<h3 class="skills__title-item">css</h3>
-								<div class="skills__progress skills__progress--css">
-									<span></span>
-								</div>
-							</li>
-							<li class="skills__item">
-								<h3 class="skills__title-item">sass (scss)</h3>
-								<div class="skills__progress skills__progress--sass">
-									<span></span>
-								</div>		
-							</li>
-							<li class="skills__item">
-								<h3 class="skills__title-item">bem</h3>
-								<div class="skills__progress skills__progress--bem">
-									<span></span>
-								</div>
-							</li>
-							<li class="skills__item">
-								<h3 class="skills__title-item">git / github</h3>
-								<div class="skills__progress skills__progress--git">
-									<span></span>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section> -->
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<img class="logo" src="img/logo.svg" alt="Logo">
-				<ul class="footer__socials">
-					<li class="footer__item">
-						<a class="footer__link" href="https://www.instagram.com/dims_web/" target="_blank" aria-label="My instagram">
-							<img src="img/icons/instagram.svg" alt="Instagram">
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="https://www.facebook.com/dims.dh/" target="_blank" aria-label="My facebook">
-							<img src="img/icons/facebook.svg" alt="Facebook">
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="#" target="_blank">
-							<img src="img/icons/linckedin.svg" alt="Linckedin" aria-label="My linckedin">
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="https://github.com/ceogenbit" target="_blank" aria-label="My github">
-							<img src="img/icons/github.svg" alt="GitHub">
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="https://t.me/+48575145837" target="_blank">
-							<img src="img/icons/telegram.svg" alt="Telegram" aria-label="My telegram">
-						</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
 	<div id="form-sent" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -470,7 +482,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240211185901"></script>
+	<script src="js/app.min.js?_v=20240212233258"></script>
 </body>
 
 </html>
