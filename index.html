@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240212233258">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240213231430">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,13 +43,13 @@
 							<a class="menu__link" href="#" data-goto-header data-goto="#about" aria-label="Go to the section"><span>about me</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
+							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" aria-label="Go to the"><span>portfolio</span></a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#" data-goto-header data-goto="#skills" aria-label="Go to the section"><span>skills</span></a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#" data-goto-header data-goto="#portfolio" aria-label="Go to the"><span>my works</span></a>
+							<a class="menu__link" href="#" aria-label="Go to the section"><span>education</span></a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#" data-goto-header data-goto="#contact" aria-label="Go to the"><span>contact</span></a>
@@ -61,7 +61,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="about" id="about">
+			<section class="about" id="about" data-watch-threshold="0.7" data-watch>
 				<div class="about__container">
 					<h1 class="about__title title title--margin">About me</h1>
 					<div class="about__inner">
@@ -103,7 +103,7 @@
 			</section>
 			<section class="portfolio" id="portfolio">
 				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin">My works</h2>
+					<h2 class="portfolio__title title title--margin">Latest projects</h2>
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__slide swiper-slide">
@@ -225,10 +225,10 @@
 			</section>
 			<section class="contact" id="contact">
 				<div class="contact__container">
-					<h2 class="contact__title title title--margin">Contact</h2>
+					<h2 class="contact__title title title--margin">Contact me</h2>
 					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="components/sendmail/sendmail.php" method="POST">
 						<input class="form__input" type="text" required name="name" placeholder="full name">
-						<input class="form__input" type="email" required name="email" placeholder="email address">
+						<input class="form__input" type="email" required name="email" placeholder="e-mail address">
 						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
 						<textarea class="form__message" required name="message" cols="60" rows="7" placeholder="your message"></textarea>
 						<button class="form__button" type="submit">Send</button>
@@ -482,7 +482,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240212233258"></script>
+	<script src="js/app.min.js?_v=20240213231430"></script>
 </body>
 
 </html>
