@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,7 @@
 			overflow: hidden;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240218140905">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240226232315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,16 +61,18 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="about" id="about" data-watch-threshold="0.7" data-watch>
+			<section class="about" id="about">
 				<div class="about__container">
-					<h1 class="about__title title title--margin">About me</h1>
+					<h1 class="about__title title title--margin" data-watch-threshold="0.5" data-watch-once data-watch>
+						About me
+					</h1>
 					<div class="about__inner">
 						<div class="about__body">
 							<div class="about__item">
-								<picture><source srcset="img/about/my-photo-original.webp" type="image/webp"><img src="img/about/my-photo-original.webp" alt="My photo red edition"></picture>
+								<picture><source srcset="img/about/my-photo-original.webp" type="image/webp"><img src="img/about/my-photo-original.webp" alt="My photo red edition" /></picture>
 							</div>
 							<div class="about__item">
-								<picture><source srcset="img/about/my-photo.webp" type="image/webp"><img src="img/about/my-photo.webp" alt="My original photo"></picture>
+								<picture><source srcset="img/about/my-photo.webp" type="image/webp"><img src="img/about/my-photo.webp" alt="My original photo" /></picture>
 							</div>
 						</div>
 						<div class="about__text">
@@ -103,13 +105,13 @@
 			</section>
 			<section class="portfolio" id="portfolio">
 				<div class="portfolio__container">
-					<h2 class="portfolio__title title title--margin">Latest project</h2>
+					<h2 class="portfolio__title title title--margin">Portfolio</h2>
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
 									<a class="portfolio__link-img" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank" aria-label="My work The Wild Kingdom">
-										<picture><source srcset="img/portfolio/the-wild-kingdom.webp" type="image/webp"><img src="img/portfolio/the-wild-kingdom.webp" alt="The Wild Kingdom"></picture>
+										<picture><source srcset="img/portfolio/the-wild-kingdom.webp" type="image/webp"><img src="img/portfolio/the-wild-kingdom.webp" alt="The Wild Kingdom" /></picture>
 									</a>
 									<h3 class="portfolio__title-slide">
 										<a class="portfolio__link" href="https://ceogenbit.github.io/thewildkingdom/" target="_blank">The Wild Kingdom</a>
@@ -122,20 +124,22 @@
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
 									<a class="portfolio__link-img" href="https://ceogenbit.github.io/interia/" target="_blank">
-										<picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.webp" alt="Interia"></picture>
+										<picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.webp" alt="Interia" /></picture>
 									</a>
 									<h3 class="portfolio__title-slide">
 										<a class="portfolio__link" href="https://ceogenbit.github.io/interia/" target="_blank">Interia</a>
 									</h3>
 									<div class="portfolio__descr">
-										<p>Blending creativity and functionality in every design</p>
+										<p>
+											Blending creativity and functionality in every design
+										</p>
 									</div>
 								</article>
 							</div>
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
 									<a class="portfolio__link-img" href="https://ceogenbit.github.io/eatly/" target="_blank">
-										<picture><source srcset="img/portfolio/eatly.webp" type="image/webp"><img src="img/portfolio/eatly.webp" alt="Eatly"></picture>
+										<picture><source srcset="img/portfolio/eatly.webp" type="image/webp"><img src="img/portfolio/eatly.webp" alt="Eatly" /></picture>
 									</a>
 									<h3 class="portfolio__title-slide">
 										<a class="portfolio__link" href="https://ceogenbit.github.io/eatly/" target="_blank">Eatly</a>
@@ -148,7 +152,7 @@
 							<div class="portfolio__slide swiper-slide">
 								<article class="portfolio__body">
 									<a class="portfolio__link-img" href="https://ceogenbit.github.io/coffee/" target="_blank">
-										<picture><source srcset="img/portfolio/coffee.webp" type="image/webp"><img src="img/portfolio/coffee.webp" alt="Coffee"></picture>
+										<picture><source srcset="img/portfolio/coffee.webp" type="image/webp"><img src="img/portfolio/coffee.webp" alt="Coffee" /></picture>
 									</a>
 									<h3 class="portfolio__title-slide">
 										<a class="portfolio__link" href="https://ceogenbit.github.io/coffee/" target="_blank">Coffee</a>
@@ -158,16 +162,41 @@
 									</div>
 								</article>
 							</div>
+							<div class="portfolio__slide swiper-slide">
+								<article class="portfolio__body">
+									<a class="portfolio__link-img" href="https://ceogenbit.github.io/growfy/" target="_blank">
+										<picture><source srcset="img/portfolio/growfy.webp" type="image/webp"><img src="img/portfolio/growfy.webp" alt="Growfy" /></picture>
+									</a>
+									<h3 class="portfolio__title-slide">
+										<a class="portfolio__link" href="https://ceogenbit.github.io/growfy/" target="_blank">Growfy</a>
+									</h3>
+									<div class="portfolio__descr">
+										<p>Marketing solutions that grow your business</p>
+									</div>
+								</article>
+							</div>
 						</div>
 					</div>
 					<div class="portfolio__control">
-						<button type="button" class="swiper-button-prev" aria-label="Next slide">
-							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
+						<button type="button" class="swiper-button-prev" aria-label="Previous slide">
+							<svg class="svg-icon" style="
+                    width: 40px;
+                    height: 40px;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#cccccc" />
 							</svg>
 						</button>
 						<button type="button" class="swiper-button-next" aria-label="Next slide">
-							<svg class="svg-icon" style="width: 40px; height: 40px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<svg class="svg-icon" style="
+                    width: 40px;
+                    height: 40px;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
 								<path d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z" fill="#CCCCCC" />
 							</svg>
 						</button>
@@ -176,7 +205,7 @@
 			</section>
 			<section class="skills" id="skills">
 				<div class="skills__container">
-					<h2 class="skills__title title title--margin">My skills</h2>
+					<h2 class="skills__title title title--margin">Skills</h2>
 					<div class="skills__body">
 						<div class="skills__skill">
 							<div class="skills__skill-inner">
@@ -230,84 +259,83 @@
 						<article class="education__item">
 							<div class="education__inner">
 								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">september 2023 - february 2024</div>
+									<img src="img/education/calendar.svg" alt="Calendar" />
+									<div class="education__date">
+										september 2023 - february 2024
+									</div>
 								</div>
-								<h3 class="education__course">HTML / CSS / JavaScript</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
+								<h3 class="education__course">HTML, CSS, JavaScript</h3>
+								<div data-showmore="items" class="education__description">
+									<p data-showmore-content="6">
+										<span>Programs and tools</span>
+										<span>Tags for building HTML</span>
+										<span>Tags for working with content</span>
+										<span>CSS introduction and syntax</span>
+										<span>CSS FlexBox</span>
+										<span>CSS font and text styles</span>
+										<span>CSS font inlining</span>
+										<span>CSS properties of blocks</span>
+										<span>CSS properties of block design</span>
+										<span>CSS background property</span>
+										<span>CSS pseudo-classes</span>
+										<span>CSS pseudo elements</span>
+										<span>CSS positioning</span>
+										<span>CSS animations</span>
+										<span>Responsive layout</span>
+										<span>SASS (SCSS) preprocessor</span>
+										<span>Working with images</span>
+										<span>CSS Grid Layout</span>
+										<span>JS introduction and syntax</span>
+										<span>JS Variables and arrays</span>
+										<span>JS work with DOM (JS HTML CSS interaction)</span>
+										<span>Testing the layout</span>
+										<span>Practice at the choice of the group</span>
 									</p>
+									<button hidden data-showmore-button="1000" type="button" class="education__more">
+										<span>read more</span>
+										<span>hide</span>
+									</button>
 								</div>
 							</div>
 						</article>
+
 						<article class="education__item">
 							<div class="education__inner">
 								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">february 2024 - june 2024</div>
+									<img src="img/education/calendar.svg" alt="Calendar" />
+									<div class="education__date">february 2024 - now</div>
 								</div>
 								<h3 class="education__course">JavaScript</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
+								<div data-showmore="items" class="education__description">
+									<p data-showmore-content="6">
+										<span>Features of the JS programming language</span>
+										<span>Data types</span> <span>Converting types</span>
+										<span>Constants and variables</span>
+										<span>Operators</span>
+										<span>The easiest ways to interact with the user</span>
+										<span>Strings in JS</span>
+										<span> Implementation of linear algorithms</span>
+										<span>Implementation of cyclic algorithms</span>
+										<span>Functions</span>
+										<span>Arrays and their methods</span>
+										<span> Implementation of algorithms with branching</span>
+										<span>The basics of OOP</span>
+										<span>Working with dates</span>
+										<span>Handling errors</span> <span>The DOM tree</span>
+										<span>Timers</span> <span>Collections</span>
+										<span>Iterators and generators</span>
+										<span>Asynchronous data processing</span>
+										<span>Modules</span>
+										<span>Gaining experience in the use ofcontrolstructures</span>
+										<span>Functional programming</span>
+										<span>Getting to know the basics of OOP</span>
+										<span>Gaining experience with manipulating DOM tree
+											elementsand event handling</span>
 									</p>
-								</div>
-							</div>
-						</article>
-						<article class="education__item">
-							<div class="education__inner">
-								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">june 2024 - october 2024</div>
-								</div>
-								<h3 class="education__course">React</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="education__item">
-							<div class="education__inner">
-								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">october 2024 - january 2025</div>
-								</div>
-								<h3 class="education__course">Angular</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="education__item">
-							<div class="education__inner">
-								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">january 2025 - april 2025</div>
-								</div>
-								<h3 class="education__course">Vue.js</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="education__item">
-							<div class="education__inner">
-								<div class="education__date-wrap">
-									<img src="img/education/calendar.svg" alt="Calendar">
-									<div class="education__date">april 2025 - october 2025</div>
-								</div>
-								<h3 class="education__course">NodeJS</h3>
-								<div class="education__description">
-									<p>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, aliquid a itaque, minus veniam exercitationem aliquam molestias aperiam adipisci, veritatis rerum omnis sunt provident unde voluptas consectetur ullam saepe autem.
-									</p>
+									<button hidden data-showmore-button="1000" type="button" class="education__more">
+										<span>read more</span>
+										<span>hide</span>
+									</button>
 								</div>
 							</div>
 						</article>
@@ -318,11 +346,13 @@
 				<div class="contact__container">
 					<h2 class="contact__title title title--margin">Contact</h2>
 					<form data-ajax data-popup-message="#form-sent" class="contact__form form" action="components/sendmail/sendmail.php" method="POST">
-						<input class="form__input" type="text" required name="name" placeholder="full name">
-						<input class="form__input" type="email" required name="email" placeholder="e-mail address">
-						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)">
+						<input class="form__input" type="text" required name="name" placeholder="full name" />
+						<input class="form__input" type="email" required name="email" placeholder="e-mail address" />
+						<input class="form__input" type="tel" name="tel" placeholder="mobile number (optional)" />
 						<textarea class="form__message" required name="message" cols="60" rows="7" placeholder="your message"></textarea>
-						<button class="form__button" type="submit">Send</button>
+						<button class="form__button" type="submit" aria-label="Send message">
+							Send
+						</button>
 					</form>
 				</div>
 			</section>
@@ -360,7 +390,6 @@
 			</div>
 		</footer>
 	</div>
-	<!-- START LOADER -->
 	<div id="loader-wrapper">
 		<div id="loading-center-absolute">
 			<div class="object" id="object_four"></div>
@@ -371,10 +400,8 @@
 		<div class="loader-section section-left"></div>
 		<div class="loader-section section-right"></div>
 	</div>
-	<!-- END LOADER -->
 
 	<style>
-		/*START LOADER DESIGN*/
 		#loader-wrapper {
 			position: fixed;
 			top: 0;
@@ -390,23 +417,17 @@
 			top: calc(50% - 100px);
 			height: 200px;
 			width: 200px;
-			/* -ms-transform: rotate(-135deg); 
-	-moz-transform: rotate(-135deg); 
-  -webkit-transform: rotate(-135deg);  */
 			transform: rotate(-135deg);
 			z-index: 1001;
 		}
 
 		.object {
-			/* -moz-border-radius: 50% 50% 50% 50%;
-	-webkit-border-radius: 50% 50% 50% 50%; */
 			border-radius: 50% 50% 50% 50%;
 			position: absolute;
 			border-top: 5px solid #fff;
 			border-bottom: 5px solid transparent;
 			border-left: 5px solid #fff;
 			border-right: 5px solid transparent;
-			/* -webkit-animation: animate 2s infinite; */
 			animation: animate 2s infinite;
 		}
 
@@ -422,7 +443,6 @@
 			top: 65px;
 			width: 70px;
 			height: 70px;
-			/* -webkit-animation-delay: 0.2s; */
 			animation-delay: 0.2s;
 		}
 
@@ -431,7 +451,6 @@
 			top: 55px;
 			width: 90px;
 			height: 90px;
-			/* -webkit-animation-delay: 0.4s; */
 			animation-delay: 0.4s;
 		}
 
@@ -440,15 +459,11 @@
 			top: 45px;
 			width: 110px;
 			height: 110px;
-			/* -webkit-animation-delay: 0.6s; */
 			animation-delay: 0.6s;
 		}
 
 		@-webkit-keyframes animate {
 			50% {
-				-ms-transform: rotate(360deg) scale(0.8);
-				-moz-transform: rotate(360deg) scale(0.8);
-				-webkit-transform: rotate(360deg) scale(0.8);
 				transform: rotate(360deg) scale(0.8);
 			}
 		}
@@ -456,9 +471,6 @@
 		@keyframes animate {
 
 			50% {
-				-ms-transform: rotate(360deg) scale(0.8);
-				-moz-transform: rotate(360deg) scale(0.8);
-				-webkit-transform: rotate(360deg) scale(0.8);
 				transform: rotate(360deg) scale(0.8);
 			}
 		}
@@ -470,11 +482,7 @@
 			height: 100%;
 			background-color: #341396;
 			z-index: 999;
-			/* -webkit-transform: translateX(0); 
-	-moz-transform: translateX(0); 
-	-ms-transform: translateX(0); */
 			transform: translateX(0);
-			/* Firefox 16+, IE 10+, Opera */
 		}
 
 		#loader-wrapper .loader-section.section-left {
@@ -489,38 +497,22 @@
 		.loaded #loading-center-absolute {
 			opacity: 0;
 			visibility: hidden;
-			/* -webkit-transition: all 0.3s ease-out;   */
 			transition: all 0.3s ease-out;
 		}
 
 		.loaded #loader-wrapper .loader-section.section-left {
-			/* -webkit-transform: translateX(-100%);
-	-moz-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);  */
 			transform: translateX(-100%);
-			/* Firefox 16+, IE 10+, Opera */
-			/* -webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);   */
 			transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 		}
 
 		.loaded #loader-wrapper .loader-section.section-right {
-			/* -webkit-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	-moz-transform: translateX(100%); */
 			transform: translateX(100%);
-			/* Firefox 16+, IE 10+, Opera */
-			/* -webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);   */
 			transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 		}
 
 		.loaded #loader-wrapper {
 			visibility: hidden;
-			/* -webkit-transform: translateY(-100%); 
-	-ms-transform: translateY(-100%);  
-	-moz-transform: translateY(-100%); */
 			transform: translateY(-100%);
-			/* Firefox 16+, IE 10+, Opera */
-			/* -webkit-transition: all 0.5s 1s ease-out;   */
 			transition: all 0.3s 1s ease-out;
 		}
 
@@ -547,8 +539,6 @@
 		.v_cyan_blue .spop {
 			background-color: #0e082c;
 		}
-
-		/*END PRELOADER DESIGN*/
 	</style>
 	<div id="form-sent" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -563,7 +553,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240218140905"></script>
+	<script src="js/app.min.js?_v=20240226232315"></script>
 </body>
 
 </html>
