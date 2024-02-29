@@ -1239,10 +1239,6 @@ main > :first-child {
   opacity: 0.2;
 }
 
-.portfolio__slider {
-  margin-right: -0.9375rem;
-}
-
 .portfolio__slide {
   opacity: 0.25;
   -webkit-transition: opacity 0.5s ease;
@@ -1618,10 +1614,6 @@ main > :first-child {
   -webkit-transition: bottom 0.3s ease;
   transition: bottom 0.3s ease;
   z-index: -1;
-}
-
-.swiper {
-  overflow: hidden;
 }
 
 .swiper-initialized {
