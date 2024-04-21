@@ -3901,29 +3901,6 @@
             },
             on: {}
         });
-        if (document.querySelector(".technology__slider")) new swiper_core_Swiper(".technology__slider", {
-            modules: [ Navigation, Keyboard ],
-            slidesPerView: 1.1,
-            spaceBetween: 15,
-            keyboard: true,
-            speed: 800,
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
-            },
-            breakpoints: {
-                579.98: {
-                    slidesPerView: 2.2
-                },
-                768.98: {
-                    slidesPerView: 3.2
-                },
-                1023.98: {
-                    slidesPerView: 4.2
-                }
-            },
-            on: {}
-        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
