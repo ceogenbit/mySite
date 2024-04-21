@@ -1329,6 +1329,9 @@ main > :first-child {
 }
 
 .portfolio__body {
+  padding: 0.9375rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 1.25rem;
   text-transform: lowercase;
 }
 
@@ -1945,10 +1948,6 @@ main > :first-child {
     font-size: 2.375rem;
   }
 
-  .portfolio__body {
-    padding-right: 1.875rem;
-  }
-
   .portfolio__title-slide {
     font-size: 2.375rem;
   }
@@ -2017,10 +2016,6 @@ main > :first-child {
 
   .about__text p {
     font-size: 1.375rem;
-  }
-
-  .portfolio__body {
-    padding-right: 1.25rem;
   }
 
   .portfolio__title-slide {
@@ -2313,18 +2308,6 @@ main > :first-child {
 @supports not (font-size: clamp( 1.375rem , 1.0787037037rem  +  1.4814814815vw , 2.375rem )) {
     .about__text p {
       font-size: calc(1.375rem + 1 * (100vw - 20rem) / 67.5);
-    }
-}
-
-@supports (padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem )) {
-    .portfolio__body {
-      padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem );
-    }
-}
-
-@supports not (padding-right: clamp( 1.25rem , 1.0648148148rem  +  0.9259259259vw , 1.875rem )) {
-    .portfolio__body {
-      padding-right: calc(1.25rem + 0.625 * (100vw - 20rem) / 67.5);
     }
 }
 

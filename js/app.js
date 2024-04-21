@@ -3887,9 +3887,10 @@
     function initSliders() {
         if (document.querySelector(".portfolio__slider")) new swiper_core_Swiper(".portfolio__slider", {
             modules: [ Navigation, Keyboard ],
-            slidesPerView: 1.2,
+            slidesPerView: 1.15,
             keyboard: true,
             speed: 800,
+            spaceBetween: 20,
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
