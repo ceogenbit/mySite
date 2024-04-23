@@ -3903,7 +3903,7 @@
     function initSliders() {
         if (document.querySelector(".portfolio__slider")) new swiper_core_Swiper(".portfolio__slider", {
             modules: [ Navigation, Keyboard ],
-            slidesPerView: 1.15,
+            slidesPerView: 1.25,
             keyboard: true,
             speed: 800,
             spaceBetween: 20,
@@ -3912,8 +3912,11 @@
                 nextEl: ".swiper-button-next"
             },
             breakpoints: {
-                768: {
+                630: {
                     slidesPerView: 2.3
+                },
+                1024: {
+                    slidesPerView: 3.3
                 }
             },
             on: {}

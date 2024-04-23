@@ -87,11 +87,11 @@ h6 {
   font-size: inherit
 }
 .dark-theme body {
-  background-color: #03182b
+  background-color: #181d31
 }
 .light-theme body {
   color: #000;
-  background-color: #f8f8f8
+  background-color: #d9d7f1
 }
 .light-theme body::-webkit-scrollbar {
   width: .625rem;
@@ -101,7 +101,7 @@ h6 {
   background-color: #000
 }
 .light-theme .area {
-  background-color: #f8f8f8
+  background-color: #d9d7f1
 }
 .light-theme .area__circles li {
   background-color: #5e5858
@@ -110,7 +110,7 @@ h6 {
   color: #fff
 }
 .light-theme .header__container {
-  background-color: #341396
+  background-color: #00005c
 }
 .light-theme .header .menu__link::before {
   background-color: #000
@@ -164,10 +164,10 @@ h6 {
 }
 .light-theme .form > input:focus,
 .light-theme .form textarea:focus {
-  outline: .25rem solid #341396
+  outline: .25rem solid #00005c
 }
 .light-theme .footer {
-  background-color: #341396
+  background-color: #00005c
 }
 .light-theme .popup__content {
   color: #fff;
@@ -276,7 +276,7 @@ body::after {
   transition: -webkit-transform .3s ease 0s;
   transition: transform .3s ease 0s;
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
-  background-color: #341396;
+  background-color: #00005c;
   text-align: center;
   padding: .9375rem;
   display: flex;
@@ -375,7 +375,7 @@ html {
   z-index: 100
 }
 .area {
-  background-color: #03182b;
+  background-color: #181d31;
   position: fixed;
   top: 0;
   left: 0;
@@ -741,7 +741,7 @@ html {
   z-index: 100
 }
 .header__container {
-  background-color: #083957;
+  background-color: #100720;
   min-height: 3.4375rem;
   border-radius: .75rem;
   display: flex;
@@ -759,7 +759,7 @@ html {
   min-height: 4.375rem;
   display: flex;
   align-items: center;
-  background-color: #083957;
+  background-color: #100720;
   box-shadow: 0 -.4375rem .5625rem -.625rem #000;
   border-radius: .625rem .625rem 0 0
 }
@@ -985,7 +985,7 @@ main > :first-child {
 }
 .portfolio__slide {
   display: flex;
-  opacity: .25;
+  opacity: .3;
   transition: opacity .5s ease
 }
 .portfolio__body {
@@ -1134,14 +1134,14 @@ main > :first-child {
 }
 .education__item {
   padding: 0 0 1.5625rem 1.5625rem;
-  border-left: .125rem solid #083957;
+  border-left: .125rem solid #100720;
   position: relative
 }
 .education__item:before {
   content: "";
   width: 1.25rem;
   height: 1.25rem;
-  background-color: #341396;
+  background-color: #00005c;
   position: absolute;
   top: -.125rem;
   left: -.6875rem;
@@ -1193,7 +1193,7 @@ main > :first-child {
   background-color: #000
 }
 .education__description p span:nth-child(3n+2) {
-  background-color: #341396
+  background-color: #00005c
 }
 .education__description p span:nth-child(3n+3) {
   background-color: #720031
@@ -1222,7 +1222,7 @@ main > :first-child {
   padding: 1.25rem;
   background-color: transparent;
   border-radius: .75rem;
-  outline: .125rem solid #083957;
+  outline: .125rem solid #100720;
   line-height: 1.25;
   color: #fff
 }
@@ -1278,7 +1278,7 @@ main > :first-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #341396;
+  background-color: #00005c;
   transition: top .3s ease;
   z-index: -1
 }
@@ -1331,6 +1331,11 @@ main > :first-child {
     flex-direction: row
   }
 }
+@media (min-width:39.375em) {
+  .portfolio__slide {
+    opacity: 1
+  }
+}
 @media (min-width:47.99875em) {
   .menu__list {
     flex: 1 1 auto;
@@ -1349,12 +1354,9 @@ main > :first-child {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #341396;
+    background-color: #00005c;
     transition: top .3s ease;
     z-index: -1
-  }
-  .portfolio__slide {
-    opacity: 1
   }
   .education__item {
     flex: 1 1 45%;
@@ -1487,7 +1489,7 @@ main > :first-child {
     height: 100%;
     border-radius: 15% 85% 0 100%/100% 0 100% 0;
     padding: 9.375rem 1.25rem 1.875rem 1.5625rem;
-    background-color: #341396;
+    background-color: #00005c;
     overflow: auto;
     flex-direction: column;
     gap: 1.5625rem;
@@ -1503,7 +1505,7 @@ main > :first-child {
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: #341396;
+    background-color: #00005c;
     z-index: 10;
     transition: right .5s ease,background-color .5s ease
   }
@@ -1767,7 +1769,7 @@ main > :first-child {
     color: #000
   }
   .light-theme .popup__close:hover {
-    background-color: #341396;
+    background-color: #00005c;
     color: #fff
   }
   .popup__close:hover {
@@ -1783,13 +1785,13 @@ main > :first-child {
   }
   .portfolio__control .swiper-button-next svg:hover path,
   .portfolio__control .swiper-button-prev svg:hover path {
-    fill: #083957
+    fill: #100720
   }
   .portfolio__control .swiper-button-disabled:hover svg path {
     fill: #ccc
   }
   .portfolio__body:hover {
-    background-color: rgba(0,0,0,.4)
+    background-color: rgba(0,0,0,.45)
   }
   .portfolio__body:hover .portfolio__img {
     -webkit-transform: scale(1.01);
